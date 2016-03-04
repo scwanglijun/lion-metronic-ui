@@ -609,7 +609,7 @@ ul.demo li {
   padding-left: 0;
 }
 .content {
-  padding: 2.2em 0;
+  padding:0;
   max-width: 660px;
   margin: 0 auto;
 }

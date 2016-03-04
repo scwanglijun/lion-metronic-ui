@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <!--<script type="text/javascript" src="./embedded_files/jquery-1.8.0.min.js"></script>-->
+    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/jquery.min.js"></script>
+    <script type="text/javascript" src="./embedded_files/run_prettify.js"></script>
+    <script type="text/javascript" src="./embedded_files/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./embedded_files/embedded-light.css">
+    <link rel="stylesheet" type="text/css" href="./embedded_files/prettify.css">
+
+
+    <!--<link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>-->
+    <link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../../../assets/plugins/metronic/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/>-->
+    <link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/toastr/toastr.css"/>
+    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/toastr/toastr.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="head">
+        <div id="actions">
+            <ul class="normalRes">
+                <li class="active">
+                    <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+                </li>
+                <!--<li>-->
+                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
+                <!--</li>-->
+
+                <li>
+                    <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
+                </li>
+
+                <li>
+                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                </li>
+
+                <li>
+                    <a title="Result" data-trigger-type="result" href="#Result">Result</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="tabs" style="">
+			<pre data-language="js" class="prettyprint js tCont rainbow active ">
+$(function(){
+   //初始化组件
+   var backTop=one.ui.backTop({
+        id:"one_backtop",
+        isAnimate:false  //是否动画,默认为true
+	});
+});
+			</pre>
+        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
+        <!--resources-->
+        <!--</div>-->
+			<pre data-language="html" class="html tCont  rainbow prettyprint">
+&lt;!--整个框架依赖的JS文件--&gt;
+&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
+&lt;!--当前组件依赖的JS文件--&gt;
+&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
+&lt;!--当前组件JS文件--&gt;
+&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
+&lt;!--当前组件依赖的CSS文件--&gt;
+&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
+&lt;!--当前组件CSS文件--&gt;
+&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+			</pre>
+			<pre data-language="css" class="css tCont  rainbow prettyprint">
+pre.prettyprint, code.prettyprint {
+        background-color: #1e2328;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -o-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        border-radius: 8px;
+}
+			</pre>
+        <div data-language="result" class="tCont result prettyprint" >
+            <a class="btn btn-primary" id="showtoast">删除/取消</a>
+            <a class="btn btn-success" id="success">success_show</a>
+            <a class="btn btn-error" id="error">error_show</a>
+            <a class="btn btn-info" id="info">info_show</a>
+            <a class="btn btn-warning" id="warning">warning_show</a>
+            <script type="text/javascript">
+                var pp='<div class="buttonBox"><button id="cancel" class="btn btn-cancel">取消</button><button id="ok" class="btn btn-ok">确认</button></div>';
+                $("#showtoast").click(function(){
+                    tip("info","确认删除该问题吗？"+pp);
+                    $('#cancel').click(function(){
+                        alert('取消');
+                    });
+                    $('#ok').click(function(){
+                        alert('这里添加动作');
+                    });
+                });
+
+                $("#success").click(function(){
+                    tip_success("恭喜你！保存成功！","success!");
+                });
+                $("#error").click(function(){
+                    tip_error("出错了！","error!");
+                });
+                $("#info").click(function(){
+                    tip_info("提示了！","info!");
+                });
+                $("#warning").click(function(){
+                    tip_warning("恭喜你！警告了！","warning!");
+                });
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
