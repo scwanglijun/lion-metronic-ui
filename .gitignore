@@ -1,0 +1,5 @@
+.settings/
+.project
+/.DS_Store
+/.idea/
+/lion-metronic-ui.iml
