@@ -316,7 +316,7 @@
               });
           }
           //表单美化
-       		//$thatelement.find('tbody tr input,textarea,select,button').uniform();
+       		$thatelement.find('tbody tr input,textarea,select,button').uniform();
           //单点checkbox
           $thatelement.find('tbody tr td input[type=checkbox]').click(function(e){            
               $(e.target ).closest('tr').trigger('click');
@@ -380,7 +380,7 @@
           //选择table外的表格DIV对象_wrapper
           var $wrapper=$('#'+this.id+'_wrapper'),that=this,$thatelement=$wrapper;
        		//表头美化[ipnut textarea select button]
-       	//	$wrapper.find('th input,textarea,select,button').uniform();
+       		$wrapper.find('th input,textarea,select,button').uniform();
           //设置表格的大小
           
           $wrapper.find('.dataTables_scrollHead table').each(function(){
