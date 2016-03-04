@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+	<script type="text/javascript" src="./embedded_files/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="./embedded_files/run_prettify.js"></script>
+	<script type="text/javascript" src="./embedded_files/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="./embedded_files/embedded-light.css">
+	<link rel="stylesheet" type="text/css" href="./embedded_files/prettify.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="head">
+			<div id="actions">
+				<ul class="normalRes">
+					<li class="active">
+						<a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+					</li>
+					<!--<li>-->
+						<!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
+					<!--</li>-->
+
+					<li>
+						<a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
+					</li>
+
+					<li>
+						<a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+					</li>
+
+					<li>
+						<a title="Result" data-trigger-type="result" href="#Result">Result</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="tabs" style="">
+			<pre data-language="js" class="prettyprint js tCont rainbow active ">
+$(function(){
+   //初始化组件
+   var backTop=one.ui.backTop({
+        id:"one_backtop",
+        isAnimate:false  //是否动画,默认为true
+	});
+});
+			</pre>
+			<!--<div data-language="resources" class="resources tCont prettyprint" >-->
+				<!--resources-->
+			<!--</div>-->
+			<pre data-language="html" class="html tCont  rainbow prettyprint">
+&lt;!--整个框架依赖的JS文件--&gt;
+&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
+&lt;!--当前组件依赖的JS文件--&gt;
+&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
+&lt;!--当前组件JS文件--&gt;
+&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
+&lt;!--当前组件依赖的CSS文件--&gt;
+&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
+&lt;!--当前组件CSS文件--&gt;
+&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+			</pre>
+			<pre data-language="css" class="css tCont  rainbow prettyprint">
+pre.prettyprint, code.prettyprint {
+        background-color: #1e2328;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -o-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        border-radius: 8px;
+}
+			</pre>
+			<div data-language="result" class="tCont result prettyprint" >
+				result
+			</div>
+		</div>
+	</div>
+</body>
+</html>
