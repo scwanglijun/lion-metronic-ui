@@ -3,7 +3,7 @@ body {
 	font-size: 12px;
 	margin: 0;
 	padding: 0;
-	background: #F9F9F9;
+	background: #F9F9F9 !important;
 }
 
 body, ul, ol, li, p, pre, div, a {
@@ -24,7 +24,7 @@ a:hover {
 
 #wrapper {
 	position: relative;
-	border: solid 1px #C6CACD;
+	/*border: solid 1px #C6CACD;*/
 	height: 100%;
 }
 
