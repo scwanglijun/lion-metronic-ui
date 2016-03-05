@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/icheck.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/metronic.js"></script>
+	<script type="application/javascript" src="../../../../assets/plugins/metronic/layout.js"></script>
+	<script type="application/javascript" src="../../../../assets/plugins/metronic/demo.js"></script>
+	<script type="application/javascript" src="../../../../assets/plugins/metronic/form-icheck.js"></script>
+	<script type="text/javascript" src="../embedded_files/run_prettify.js"></script>
+	<script type="text/javascript" src="../embedded_files/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/all.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/plugins.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/custom.css">
+	<link rel="stylesheet" type="text/css" href="../embedded_files/embedded-light.css">
+	<link rel="stylesheet" type="text/css" href="../embedded_files/prettify.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/UI_css/forms/formControl.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="head">
+		<div id="actions">
+			<ul class="normalRes">
+				<li class="active">
+					<a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+				</li>
+				<!--<li>-->
+				<!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
+				<!--</li>-->
+
+				<li>
+					<a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
+				</li>
+
+				<li>
+					<a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+				</li>
+
+				<li>
+					<a title="Result" data-trigger-type="result" href="#Result">Result</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="tabs" style="height: 665px;">
+			<pre data-language="js" class="prettyprint js tCont rainbow active ">
+$(function(){
+   //初始化组件
+   var backTop=one.ui.backTop({
+        id:"one_backtop",
+        isAnimate:false  //是否动画,默认为true
+	});
+});
+			</pre>
+		<!--<div data-language="resources" class="resources tCont prettyprint" >-->
+		<!--resources-->
+		<!--</div>-->
+			<pre data-language="html" class="html tCont  rainbow prettyprint">
+&lt;!--当前组件CSS文件--&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css"&gt;
+&lt;!--当前组件HTML--&gt;
+			</pre>
+		<div data-language="result" class="tCont result prettyprint" >
+			<div class="row">
+				<div class="col-md-6">
+					<div class="portlet light">
+						<div class="portlet-title tabbable-line">
+							<div class="caption caption-md">
+								<i class="icon-globe font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">Default Form</span>
+							</div>
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#portlet_tab_1_1" data-toggle="tab">
+										Minimal </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_1_2" data-toggle="tab">
+										Square </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_1_3" data-toggle="tab">
+										Flat </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_1_4" data-toggle="tab">
+										Line </a>
+								</li>
+							</ul>
+						</div>
+						<div class="portlet-body form">
+							<div class="tab-content">
+								<div class="tab-pane active" id="portlet_tab_1_1">
+									<div class="skin skin-minimal">
+										<form role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label>颜色方案</label>
+													<div class="input-group">
+														<ul class="icheck-colors">
+															<li class="">
+															</li>
+															<li class="red">
+															</li>
+															<li class="green">
+															</li>
+															<li class="blue">
+															</li>
+															<li class="aero">
+															</li>
+															<li class="grey active">
+															</li>
+															<li class="orange">
+															</li>
+															<li class="pink">
+															</li>
+															<li class="purple">
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Checkbox List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label class="">
+																<div class="icheckbox_minimal-grey checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label class="">
+																<div class="icheckbox_minimal-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label class="">
+																<div class="icheckbox_minimal-grey checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Checkboxes</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label class="">
+																<div class="icheckbox_minimal-grey" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label>
+																<div class="icheckbox_minimal-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label class="">
+																<div class="icheckbox_minimal-grey checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Radio List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label class="">
+																<div class="iradio_minimal-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label class="">
+																<div class="iradio_minimal-grey" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label class="">
+																<div class="iradio_minimal-grey checked" style="position: relative;"><input type="radio" name="radio1" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Radios</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="iradio_minimal-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label>
+																<div class="iradio_minimal-grey checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label>
+																<div class="iradio_minimal-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_1_2">
+									<div class="skin skin-square">
+										<form role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label>颜色方案</label>
+													<div class="input-group">
+														<ul class="icheck-colors">
+															<li>
+															</li>
+															<li class="red">
+															</li>
+															<li class="green">
+															</li>
+															<li class="blue">
+															</li>
+															<li class="aero">
+															</li>
+															<li class="grey active">
+															</li>
+															<li class="orange">
+															</li>
+															<li class="pink">
+															</li>
+															<li class="purple">
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Checkbox List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label>
+																<div class="icheckbox_square-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label>
+																<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Checkboxes</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label>
+																<div class="icheckbox_square-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label>
+																<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Radio List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label>
+																<div class="iradio_square-grey checked" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label>
+																<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Radios</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label>
+																<div class="iradio_square-grey checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label>
+																<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_1_3">
+									<div class="skin skin-flat">
+										<form role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label>颜色方案</label>
+													<div class="input-group">
+														<ul class="icheck-colors">
+															<li>
+															</li>
+															<li class="red">
+															</li>
+															<li class="green">
+															</li>
+															<li class="blue">
+															</li>
+															<li class="aero">
+															</li>
+															<li class="grey active">
+															</li>
+															<li class="orange">
+															</li>
+															<li class="pink">
+															</li>
+															<li class="purple">
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Checkbox List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label>
+																<div class="icheckbox_flat-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label>
+																<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Checkboxes</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+															<label>
+																<div class="icheckbox_flat-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															<label>
+																<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Radio List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label>
+																<div class="iradio_flat-grey checked" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label>
+																<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Radios</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+															<label>
+																<div class="iradio_flat-grey checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															<label>
+																<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_1_4">
+									<div class="skin skin-line">
+										<form role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label>颜色方案</label>
+													<div class="input-group">
+														<ul class="icheck-colors">
+															<li>
+															</li>
+															<li class="red">
+															</li>
+															<li class="green">
+															</li>
+															<li class="blue">
+															</li>
+															<li class="aero">
+															</li>
+															<li class="grey active">
+															</li>
+															<li class="orange">
+															</li>
+															<li class="pink">
+															</li>
+															<li class="purple">
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Checkbox List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="icheckbox_line-grey checked"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Checkboxes</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="icheckbox_line-grey checked"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Radio List</label>
+													<div class="input-group">
+														<div class="icheck-list">
+															<label>
+																<div class="iradio_line-grey"><input type="radio" name="radio1" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 1 " style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 1 <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="iradio_line-grey checked"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="iradio_line-grey"><input type="radio" name="radio1" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label>Inline Radios</label>
+													<div class="input-group">
+														<div class="icheck-inline">
+															<label>
+																<div class="iradio_line-grey"><input type="radio" name="radio2" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="iradio_line-grey checked"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+															<label>
+																<div class="iradio_line-grey"><input type="radio" name="radio2" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="portlet light">
+						<div class="portlet-title tabbable-line">
+							<div class="caption caption-md">
+								<i class="icon-globe font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">Horizontal Form</span>
+							</div>
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#portlet_tab_2_1" data-toggle="tab">
+										Minimal </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_2_2" data-toggle="tab">
+										Square </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_2_3" data-toggle="tab">
+										Flat </a>
+								</li>
+								<li>
+									<a href="#portlet_tab_2_4" data-toggle="tab">
+										Line </a>
+								</li>
+							</ul>
+						</div>
+						<div class="portlet-body form">
+							<div class="tab-content">
+								<div class="tab-pane active" id="portlet_tab_2_1">
+									<div class="skin skin-minimal">
+										<form class="form-horizontal" role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														颜色方案 </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<ul class="icheck-colors">
+																<li class="">
+																</li>
+																<li class="red">
+																</li>
+																<li class="green">
+																</li>
+																<li class="blue active">
+																</li>
+																<li class="aero">
+																</li>
+																<li class="grey">
+																</li>
+																<li class="orange">
+																</li>
+																<li class="pink">
+																</li>
+																<li class="purple">
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														Checkbox List </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label class="">
+																	<div class="icheckbox_minimal-blue checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label class="">
+																	<div class="icheckbox_minimal-blue checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+																<label class="">
+																	<div class="icheckbox_minimal-blue checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label class="">
+																	<div class="icheckbox_minimal-blue checked" style="position: relative;"><input type="checkbox" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label>
+																	<div class="icheckbox_minimal-blue checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Radio List</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label class="">
+																	<div class="iradio_minimal-blue" style="position: relative;"><input type="radio" name="radio1" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label class="">
+																	<div class="iradio_minimal-blue" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+																<label class="">
+																	<div class="iradio_minimal-blue checked" style="position: relative;"><input type="radio" name="radio1" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline Radios</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="iradio_minimal-blue" style="position: relative;"><input type="radio" name="radio2" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label>
+																	<div class="iradio_minimal-blue checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_2_2">
+									<div class="skin skin-square">
+										<form class="form-horizontal" role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														颜色方案 </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<ul class="icheck-colors">
+																<li>
+																</li>
+																<li class="red">
+																</li>
+																<li class="green">
+																</li>
+																<li class="blue">
+																</li>
+																<li class="aero">
+																</li>
+																<li class="grey active">
+																</li>
+																<li class="orange">
+																</li>
+																<li class="pink">
+																</li>
+																<li class="purple">
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														Checkbox List </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label>
+																	<div class="icheckbox_square-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+																<label>
+																	<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="icheckbox_square-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label>
+																	<div class="icheckbox_square-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Radio List</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label>
+																	<div class="iradio_square-grey checked" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+																<label>
+																	<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline Radios</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="iradio_square-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label>
+																	<div class="iradio_square-grey checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_square-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_2_3">
+									<div class="skin skin-flat">
+										<form class="form-horizontal" role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														颜色方案 </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<ul class="icheck-colors">
+																<li>
+																</li>
+																<li class="red">
+																</li>
+																<li class="green">
+																</li>
+																<li class="blue">
+																</li>
+																<li class="aero">
+																</li>
+																<li class="grey active">
+																</li>
+																<li class="orange">
+																</li>
+																<li class="pink">
+																</li>
+																<li class="purple">
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														Checkbox List </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label>
+																	<div class="icheckbox_flat-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+																<label>
+																	<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="icheckbox_flat-grey" style="position: relative;"><input type="checkbox" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 1 </label>
+																<label>
+																	<div class="icheckbox_flat-grey checked" style="position: relative;"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Checkbox 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Radio List</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label>
+																	<div class="iradio_flat-grey checked" style="position: relative;"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+																<label>
+																	<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio1" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 3 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline Radios</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="iradio_flat-grey" style="position: relative;"><input type="radio" name="radio2" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 1 </label>
+																<label>
+																	<div class="iradio_flat-grey checked" style="position: relative;"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_flat-grey" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> Radio Button 2 </label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane" id="portlet_tab_2_4">
+									<div class="skin skin-line">
+										<form class="form-horizontal" role="form">
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														颜色方案 </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<ul class="icheck-colors">
+																<li>
+																</li>
+																<li class="red">
+																</li>
+																<li class="green">
+																</li>
+																<li class="blue">
+																</li>
+																<li class="aero">
+																</li>
+																<li class="grey active">
+																</li>
+																<li class="orange">
+																</li>
+																<li class="pink">
+																</li>
+																<li class="purple">
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">
+														Checkbox List </label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox Button 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox Button 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="icheckbox_line-grey checked"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox Button 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox Button 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox Button 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox Button 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="icheckbox_line-grey"><input type="checkbox" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="icheckbox_line-grey checked"><input type="checkbox" checked="" class="icheck" data-checkbox="icheckbox_line-grey" data-label="Checkbox 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Checkbox 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Radio List</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-list">
+																<label>
+																	<div class="iradio_line-grey"><input type="radio" name="radio1" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="iradio_line-grey checked"><input type="radio" name="radio1" checked="" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="iradio_line-grey"><input type="radio" name="radio1" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 3" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 3<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-4 control-label">Inline Radios</label>
+													<div class="col-md-8">
+														<div class="input-group">
+															<div class="icheck-inline">
+																<label>
+																	<div class="iradio_line-grey"><input type="radio" name="radio2" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 1<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+																<label>
+																	<div class="iradio_line-grey checked"><input type="radio" name="radio2" checked="" class="icheck" data-radio="iradio_line-grey" data-label="Radio Button 2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>Radio Button 2<ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions">
+												<button type="submit" class="btn green-haze">Submit</button>
+												<button type="button" class="btn default">Cancel</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		jQuery(document).ready(function() {
+			Metronic.init(); // init metronic core components
+			Layout.init(); // init current layout
+			Demo.init();
+			FormiCheck.init(); // init page demo
+		});
+	</script>
+</body>
+</html>
+
+
