@@ -202,6 +202,7 @@ a.button:hover {
   position: relative;
   z-index: 1;
   padding: 0 60px 30px;
+  padding-top: 80px;
   overflow-x: hidden;
 }
 #ad {
@@ -447,19 +448,22 @@ ul.demo li {
   color: #2c3e50;
 }
 #header {
+  width:100%;
   background-color: #fff;
   box-shadow: 0 0 4px rgba(0,0,0,0.25);
-  padding: 16px 60px;
-  position: relative;
+  padding: 16px 0;
+  position: fixed;
   z-index: 2;
 }
 #nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  right: 60px;
-  top: 16px;
+  /*position: absolute;*/
+  /*right: 60px;*/
+  /*top: 16px;*/
+  float: right;
+  margin-right: 60px;
   height: 40px;
   line-height: 40px;
 }
@@ -496,6 +500,7 @@ ul.demo li {
 }
 #logo {
   display: inline-block;
+  margin-left: 60px;
   font-size: 1.5em;
   line-height: 40px;
   color: #2c3e50;
@@ -811,6 +816,7 @@ ul.demo li {
   }
   #main {
     padding: 2em 1.4em 0;
+
   }
   .highlight pre {
     padding: 1.2em 1em;
