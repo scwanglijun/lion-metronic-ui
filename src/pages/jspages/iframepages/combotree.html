@@ -21,6 +21,9 @@
         .tCont{
             height:300px;
         }
+        #head{
+            z-index: 10000000;
+        }
     </style>
 
     <script type="text/javascript" src="../../../assets/plugins/metronic/jquery-2.1.4.js"></script>
@@ -56,19 +59,19 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+<!--$(function(){-->
+   <!--//初始化组件-->
+   <!--var backTop=one.ui.backTop({-->
+        <!--id:"one_backtop",-->
+        <!--isAnimate:false  //是否动画,默认为true-->
+	<!--});-->
+<!--});-->
 			</pre>
         <!--<div data-language="resources" class="resources tCont prettyprint" >-->
         <!--resources-->
         <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
 &lt;!--整个框架依赖的JS文件--&gt;
 &lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
 &lt;!--当前组件依赖的JS文件--&gt;
@@ -92,6 +95,14 @@ pre.prettyprint, code.prettyprint {
 }
 			</pre>
         <div data-language="result" class="tCont result prettyprint" >
+            <style>
+                .btn-group{
+                    height: 36px !important;
+                }
+                .content{
+                    top: 36px !important;
+                }
+            </style>
             <div class="box">
                 <input  id="parentResourceId"  name="parentResourceId" placeholder="请选择父级资源…"  type="text" class="lion-combotree form-control" data-loadurl="../../../assets/plugins/metronic/json/combotree.json" data-width="240px" data-height="300px"/>
             </div>
