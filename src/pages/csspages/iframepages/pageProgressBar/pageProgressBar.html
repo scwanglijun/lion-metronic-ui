@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/plugins/metronic/metronic.js"></script>
+	<script type="application/javascript" src="../../../../assets/plugins/metronic/layout.js"></script>
+	<script type="text/javascript" src="../embedded_files/run_prettify.js"></script>
+	<script type="text/javascript" src="../embedded_files/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css">
+	<link rel="stylesheet" type="text/css" href="../embedded_files/embedded-light.css">
+	<link rel="stylesheet" type="text/css" href="../embedded_files/prettify.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="head">
+		<div id="actions">
+			<ul class="normalRes">
+				<li class="active">
+					<a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+				</li>
+				<!--<li>-->
+				<!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
+				<!--</li>-->
+
+				<li>
+					<a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
+				</li>
+
+				<li>
+					<a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+				</li>
+
+				<li>
+					<a title="Result" data-trigger-type="result" href="#Result">Result</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="tabs" style="height: 665px;">
+			<pre data-language="js" class="prettyprint js tCont rainbow active ">
+$(function(){
+   //初始化组件
+   var backTop=one.ui.backTop({
+        id:"one_backtop",
+        isAnimate:false  //是否动画,默认为true
+	});
+});
+			</pre>
+		<!--<div data-language="resources" class="resources tCont prettyprint" >-->
+		<!--resources-->
+		<!--</div>-->
+			<pre data-language="html" class="html tCont  rainbow prettyprint">
+&lt;!--当前组件CSS文件--&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css"&gt;
+&lt;!--当前组件HTML--&gt;
+			</pre>
+		<div data-language="result" class="tCont result prettyprint" >
+			<div class="portlet box blue-hoki">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-gift"></i>Pace Themes
+					</div>
+					<div class="tools">
+						<a href="javascript:;" class="collapse" data-original-title="" title="">
+						</a>
+						<a href="javascript:;" class="reload" data-original-title="" title="">
+						</a>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<table class="table table-hover table-striped table-bordered">
+						<tbody><tr>
+							<td>
+								Default Example With Spinner <code>pace-theme-flash.css</code>
+							</td>
+							<td>
+								<a class="btn default" href="pageProgressBar.html">
+									View Demo </a>
+							</td>
+						</tr>
+						<tr class="active">
+							<td>
+								Big Counter <code>pace-theme-big-counter.css</code>
+							</td>
+							<td>
+								<a class="btn blue" href="pageProgressBar.html">
+									View Demo </a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Minimal Example Without Spinner <code>pace-theme-minimal.css</code>
+							</td>
+							<td>
+								<a class="btn default" href="pageProgressBar.html">
+									View Demo </a>
+							</td>
+						</tr>
+						</tbody></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	jQuery(document).ready(function() {
+		// initiate layout and plugins
+		Metronic.init(); // init metronic core components
+		Layout.init(); // init current layout
+	});
+</script>
+</html>
