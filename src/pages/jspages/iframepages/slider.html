@@ -13,12 +13,13 @@
 
     <link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../assets/plugins/metronic/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
-    <link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/>
     <link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/plugins/metronic/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <!--<link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/>-->
+    <link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/>
     <!--<script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-daterangepicker/moment.min.js"></script>-->
-    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -47,19 +48,13 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow  ">
+
 			</pre>
         <!--<div data-language="resources" class="resources tCont prettyprint" >-->
         <!--resources-->
         <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
 &lt;!--整个框架依赖的JS文件--&gt;
 &lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
 &lt;!--当前组件依赖的JS文件--&gt;
@@ -72,18 +67,153 @@ $(function(){
 &lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
 			</pre>
 			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
-}
+<!--pre.prettyprint, code.prettyprint {-->
+        <!--background-color: #1e2328;-->
+        <!-- -moz-border-radius: 8px;-->
+        <!-- -webkit-border-radius: 8px;-->
+        <!-- -o-border-radius: 8px;-->
+        <!-- -ms-border-radius: 8px;-->
+        <!-- -khtml-border-radius: 8px;-->
+        <!--border-radius: 8px;-->
+<!--}-->
 			</pre>
         <div data-language="result" class="tCont result prettyprint" >
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet box blue">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>离子范围滑块
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse">
+                                </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config">
+                                </a>
+                                <a href="javascript:;" class="reload">
+                                </a>
+                                <a href="javascript:;" class="remove">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <form role="form" class="form-horizontal form-bordered">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">基本Slider</label>
+                                        <div class="col-md-9">
+                                            <input id="range_4" type="text" name="range_4" value="10000;100000"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">金额范围 1</label>
+                                        <div class="col-md-9">
+                                            <input id="range_1" type="text" name="range_1" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">金额范围 2</label>
+                                        <div class="col-md-9">
+                                            <input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">长度Slider</label>
+                                        <div class="col-md-9">
+                                            <input id="range_5" type="text" name="range_5" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">温度Slider</label>
+                                        <div class="col-md-9">
+                                            <input id="range_6" type="text" name="range_6" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group last">
+                                        <label class="col-md-3 control-label">距离范围</label>
+                                        <div class="col-md-9">
+                                            <input id="range_3" type="text" name="range_3" value="1000000;100000000"/>
+											<pre class="well margin-top-20" id="result">
+											</pre>
+                                            <input type="button" class="btn btn-sm red" id="updateLast" value="Update this slider">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn green">Submit</button>
+                                            <button type="button" class="btn default">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END PORTLET-->
+                </div>
+            </div>
 
+            <script>
+                $("#range_1").ionRangeSlider({
+                    min: 0,
+                    max: 5000,
+                    from: 1000,
+                    to: 4000,
+                    type: 'double',
+                    step: 1,
+                    prefix: "$",
+                    prettify: false,
+                    hasGrid: true
+                });
+
+                $("#range_2").ionRangeSlider();
+
+                $("#range_5").ionRangeSlider({
+                    min: 0,
+                    max: 10,
+                    type: 'single',
+                    step: 0.1,
+                    postfix: " mm",
+                    prettify: false,
+                    hasGrid: true
+                });
+
+                $("#range_6").ionRangeSlider({
+                    min: -50,
+                    max: 50,
+                    from: 0,
+                    type: 'single',
+                    step: 1,
+                    postfix: "°",
+                    prettify: false,
+                    hasGrid: true
+                });
+
+                $("#range_4").ionRangeSlider({
+                    type: "single",
+                    step: 100,
+                    postfix: " light years",
+                    from: 55000,
+                    hideText: true
+                });
+
+                $("#range_3").ionRangeSlider({
+                    type: "double",
+                    postfix: " miles",
+                    step: 10000,
+                    from: 25000000,
+                    to: 35000000,
+                    onChange: function(obj){
+                        var t = "";
+                        for(var prop in obj) {
+                            t += prop + ": " + obj[prop] + "\r\n";
+                        }
+                        $("#result").html(t);
+                    }
+                });
+            </script>
         </div>
     </div>
 </div>

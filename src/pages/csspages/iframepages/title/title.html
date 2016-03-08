@@ -48,22 +48,141 @@
 	</div>
 	<div id="tabs" style="">
 			<pre data-language="js" class="prettyprint js tCont rainbow ">
-<!--$(function(){-->
-   <!--//初始化组件-->
-   <!--var backTop=one.ui.backTop({-->
-        <!--id:"one_backtop",-->
-        <!--isAnimate:false  //是否动画,默认为true-->
-	<!--});-->
-<!--});-->
+
 			</pre>
 		<!--<div data-language="resources" class="resources tCont prettyprint" >-->
 		<!--resources-->
 		<!--</div>-->
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
 &lt;!--当前组件CSS文件--&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/font-awesome.min.css"&gt;
 &lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css"&gt;
 &lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css"&gt;
 &lt;!--当前组件HTML--&gt;
+
+&lt;div class="tiles"&gt;
+    &lt;div class="tile double-down bg-blue-hoki"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-bell-o"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Notifications
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                6
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile double selected bg-green-turquoise"&gt;
+        &lt;div class="corner"&gt;
+        &lt;/div&gt;
+        &lt;div class="check"&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;h4&gt;support@metronic.com&lt;/h4&gt;
+            &lt;p&gt;
+                Re: Metronic v1.2 - Project Update!
+            &lt;/p&gt;
+            &lt;p&gt;
+                24 March 2013 12.30PM confirmed for the project plan update meeting...
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                &lt;i class="fa fa-envelope"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                14
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile selected bg-yellow-saffron"&gt;
+        &lt;div class="corner"&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-user"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Members
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                452
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile double bg-blue-madison"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;img src="../../../../assets/plugins/metronic/imgs/photo2.jpg" alt=""&gt;
+            &lt;h4&gt;Announcements&lt;/h4&gt;
+            &lt;p&gt;
+                Easily style icon color, size, shadow, and anything that's possible with CSS.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Bob Nilson
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                24 Jan 2013
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile bg-purple-studio"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Orders
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                121
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile bg-green-meadow"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-comments"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Feedback
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                12
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile bg-red-intense"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-coffee"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Meetups
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                12 Jan
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tile bg-red-sunglo"&gt;
+        &lt;div class="tile-body"&gt;
+            &lt;i class="fa fa-plane"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="tile-object"&gt;
+            &lt;div class="name"&gt;
+                Projects
+            &lt;/div&gt;
+            &lt;div class="number"&gt;
+                34
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
 			</pre>
 		<div data-language="result" class="tCont result prettyprint" >
 			<div class="tiles">
@@ -190,6 +309,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 </html>
 

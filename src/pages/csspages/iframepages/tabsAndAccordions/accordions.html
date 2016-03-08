@@ -54,9 +54,345 @@
 		<!--</div>-->
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
 &lt;!--当前组件CSS文件--&gt;
+&lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/font-awesome.min.css"&gt;
 &lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/bootstrap.min.css"&gt;
 &lt;link rel="stylesheet" type="text/css" href="../../../../assets/plugins/metronic/components-rounded.css"&gt;
 &lt;!--当前组件HTML--&gt;
+
+&lt;div class="portlet box green"&gt;
+    &lt;div class="portlet-title"&gt;
+        &lt;div class="caption"&gt;
+            &lt;i class="fa fa-gift"&gt;&lt;/i&gt;Accordions
+        &lt;/div&gt;
+        &lt;div class="tools"&gt;
+            &lt;a href="javascript:;" class="collapse" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="reload" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="remove" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="portlet-body"&gt;
+        &lt;div class="panel-group accordion" id="accordion1"&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1"&gt;
+                            Collapsible Group Item #1 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_1" class="panel-collapse in"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_2"&gt;
+                            Collapsible Group Item #2 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_2" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body" style="height:200px; overflow-y:auto;"&gt;
+                        &lt;p&gt;
+                            111111Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn blue" href="accordions.html#collapse_2" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_3"&gt;
+                            Collapsible Group Item #3 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_3" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn green" href="accordions.html#collapse_3" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_4"&gt;
+                            Collapsible Group Item #4 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_4" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn red" href="accordions.html#collapse_4" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="portlet box yellow"&gt;
+    &lt;div class="portlet-title"&gt;
+        &lt;div class="caption"&gt;
+            &lt;i class="fa fa-gift"&gt;&lt;/i&gt;Accordions with Icons
+        &lt;/div&gt;
+        &lt;div class="tools"&gt;
+            &lt;a href="javascript:;" class="collapse" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="reload" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="remove" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="portlet-body"&gt;
+        &lt;div class="panel-group accordion" id="accordion3"&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_1"&gt;
+                            Collapsible Group Item #1 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_3_1" class="panel-collapse in"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_2"&gt;
+                            Collapsible Group Item #2 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_3_2" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body" style="height:200px; overflow-y:auto;"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn blue" href="accordions.html#collapse_3_2" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_3"&gt;
+                            Collapsible Group Item #3 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_3_3" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn green" href="accordions.html#collapse_3_3" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse_3_4"&gt;
+                            Collapsible Group Item #4 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_3_4" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn red" href="accordions.html#collapse_3_4" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="portlet box purple"&gt;
+    &lt;div class="portlet-title"&gt;
+        &lt;div class="caption"&gt;
+            &lt;i class="fa fa-gift"&gt;&lt;/i&gt;Scrollable Accordions
+        &lt;/div&gt;
+        &lt;div class="tools"&gt;
+            &lt;a href="javascript:;" class="collapse" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="reload" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="remove" data-original-title="" title=""&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="portlet-body"&gt;
+        &lt;div class="panel-group accordion scrollable" id="accordion2"&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_2_1"&gt;
+                            Collapsible Group Item #1 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_2_1" class="panel-collapse in"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_2_2"&gt;
+                            Collapsible Group Item #2 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_2_2" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn blue" href="accordions.html#collapse_2_2" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_2_3"&gt;
+                            Collapsible Group Item #3 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_2_3" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn green" href="accordions.html#collapse_2_3" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;
+                        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_2_4"&gt;
+                            Collapsible Group Item #4 &lt;/a&gt;
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div id="collapse_2_4" class="panel-collapse collapse"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a class="btn red" href="accordions.html#collapse_2_4" target="_blank"&gt;
+                                Activate this section via URL &lt;/a&gt;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
 			</pre>
 		<div data-language="result" class="tCont result prettyprint" >
 			<div class="portlet box green">
@@ -394,6 +730,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 </html>
 
