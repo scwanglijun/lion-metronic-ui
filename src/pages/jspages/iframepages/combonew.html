@@ -35,8 +35,12 @@
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
-                <li>
+                <!--<li>
                     <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                </li>-->
+
+                <li>
+                    <a title="JS" data-trigger-type="js" href="#js">JS</a>
                 </li>
 
                 <li>
@@ -46,39 +50,40 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+<!--$(function(){
    //初始化组件
    var backTop=one.ui.backTop({
         id:"one_backtop",
         isAnimate:false  //是否动画,默认为true
 	});
-});
+});-->
 			</pre>
         <!--<div data-language="resources" class="resources tCont prettyprint" >-->
         <!--resources-->
         <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/UI_css/combonew/select2.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;script src="../../../assets/plugins/metronic/jquery-2.1.4.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/combonew/lion.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/combonew/select2.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/combonew/combonew.js" type="text/javascript"&gt;&lt;/script&gt;
+
+&lt;form class="form-horizontal"&gt;
+    &lt;label class="control-label col-md-1" for="parameterCodeList"&gt;参数类型:&lt;/label&gt;
+    &lt;div class="col-md-3"&gt;
+        &lt;select id="parameterCodeList" name="sel"  placeholder="请选择参数列表..."
+                class="lion-combo form-control select2" data-valueField='codeValue'
+                data-textField='nameZh' data-URL="../../../assets/plugins/metronic/json/combo.json"&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
 			</pre>
 			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
+body{
+   font-size:'13px'
 }
 			</pre>
         <div data-language="result" class="tCont result prettyprint" >
