@@ -39,16 +39,21 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
-                <li>
+                <!--<li>
                     <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                </li>-->
+
+                <li>
+                    <a title="JS" data-trigger-type="js" href="#js">JS</a>
+                </li>
+
+                <li>
+                    <a title="ResponseJSON" data-trigger-type="response" href="#ResponseJSON">ResponseJSON</a>
                 </li>
 
                 <li>
@@ -58,41 +63,110 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+<!--$(function(){
    //初始化组件
    var backTop=one.ui.backTop({
         id:"one_backtop",
         isAnimate:false  //是否动画,默认为true
 	});
-});
+});-->
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/datagrid/uniform.default.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/datagrid/dataTables.scroller.min.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/datagrid/dataTables.colReorder.min.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/datagrid/dataTables.bootstrap.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/combotree/lion.css"/&gt;
+
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/jquery-2.1.4.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/jquery.uniform.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/jquery.dataTables.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/dataTables.tableTools.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/dataTables.scroller.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/dataTables.bootstrap.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/lion.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/datagrid/datagrids.js"&gt;&lt;/script&gt;
+&lt;table class="lion-datagrids table table-striped table-bordered table-hover" id="sys_icon_tb" data-singleselect="true"  data-loadurl="../../../assets/plugins/metronic/json/list.json" data-checkbox="true" data-pagesize="10"&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th class="table-checkbox" data-field='id' data-checkbox="true"&gt;
+            &lt;input type="checkbox" class="group-checkable" data-set="#sys_icon_tb.checkboxes"  data-sortable="false" /&gt;
+        &lt;/th&gt;
+        &lt;th data-field='iconType' data-sortDir="asc" style="width:100px;" data-formatter=""&gt;
+            图标类型
+        &lt;/th&gt;
+        &lt;th data-field="iconClass" style="width:100px;"  data-formatter=""&gt;
+            图标类名
+        &lt;/th&gt;
+        &lt;th data-field="createdDate" style="width:100px;"&gt;
+            创建时间
+        &lt;/th&gt;
+        &lt;th data-field="updatedDate" style="width:100px;"&gt;
+            更新时间
+        &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+&lt;/table&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
-}
-			</pre>
+
+        <pre data-language="response" class="response tCont  rainbow prettyprint">
+[
+  {
+    "type":"系统类型",
+    "nameEn":"ICON_TYPE",
+    "nameZh":"图标类型",
+    "codeLenLimit":"100",
+    "editable":"是",
+    "createdDate":"2015-03-30 11:19:54",
+	"updatedDate":"2015-03-30 11:30:17"
+  },
+  {
+    "type":"系统类型",
+    "nameEn":"sysInterface",
+    "nameZh":"接口管理",
+    "codeLenLimit":"1111",
+    "editable":"是",
+    "createdDate":"2014-06-01 21:47:51",
+    "updatedDate":"2014-06-01 21:47:51"
+  },
+  {
+    "type":"系统类型",
+    "nameEn":"datagrid_type",
+    "nameZh":"Datagrid类型",
+    "codeLenLimit":"1000",
+    "editable":"否",
+    "createdDate":"2014-04-08 23:08:45",
+    "updatedDate":"2015-03-06 09:39:36"
+  },
+  {
+    "type":"系统类型",
+    "nameEn":"PageList",
+    "nameZh":"PageList",
+    "codeLenLimit":"1000",
+    "editable":"是",
+    "createdDate":"2013-03-28 22:33:45",
+    "updatedDate":"2013-03-28 22:33:45"
+  }
+,
+  {
+    "type":"系统类型",
+    "nameEn":"PagePosition",
+    "nameZh":"PagePosition",
+    "codeLenLimit":"1000",
+    "editable":"是",
+    "createdDate":"2013-03-28 22:31:02",
+    "updatedDate":"2013-03-28 22:31:02"
+  }
+]
+        </pre>
+
         <div data-language="result" class="tCont result prettyprint" >
             <style>
                 .pagination{

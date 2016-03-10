@@ -29,16 +29,13 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -49,25 +46,153 @@
     </div>
     <div id="tabs" style="">
 			<pre data-language="js" class="prettyprint js tCont rainbow  ">
+&lt;script&gt;
+    $("#range_1").ionRangeSlider({
+        min: 0,
+        max: 5000,
+        from: 1000,
+        to: 4000,
+        type: 'double',
+        step: 1,
+        prefix: "$",
+        prettify: false,
+        hasGrid: true
+    });
 
+    $("#range_2").ionRangeSlider();
+
+    $("#range_5").ionRangeSlider({
+        min: 0,
+        max: 10,
+        type: 'single',
+        step: 0.1,
+        postfix: " mm",
+        prettify: false,
+        hasGrid: true
+    });
+
+    $("#range_6").ionRangeSlider({
+        min: -50,
+        max: 50,
+        from: 0,
+        type: 'single',
+        step: 1,
+        postfix: "°",
+        prettify: false,
+        hasGrid: true
+    });
+
+    $("#range_4").ionRangeSlider({
+        type: "single",
+        step: 100,
+        postfix: " light years",
+        from: 55000,
+        hideText: true
+    });
+
+    $("#range_3").ionRangeSlider({
+        type: "double",
+        postfix: " miles",
+        step: 10000,
+        from: 25000000,
+        to: 35000000,
+        onChange: function(obj){
+            var t = "";
+            for(var prop in obj) {
+                t += prop + ": " + obj[prop] + "\r\n";
+            }
+            $("#result").html(t);
+        }
+    });
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
+
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"&gt;&lt;/script&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-md-12"&gt;
+        &lt;!-- BEGIN PORTLET--&gt;
+        &lt;div class="portlet box blue"&gt;
+            &lt;div class="portlet-title"&gt;
+                &lt;div class="caption"&gt;
+                    &lt;i class="fa fa-gift"&gt;&lt;/i&gt;离子范围滑块
+                &lt;/div&gt;
+                &lt;div class="tools"&gt;
+                    &lt;a href="javascript:;" class="collapse"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#portlet-config" data-toggle="modal" class="config"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="javascript:;" class="reload"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="javascript:;" class="remove"&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="portlet-body form"&gt;
+                &lt;form role="form" class="form-horizontal form-bordered"&gt;
+                    &lt;div class="form-body"&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;基本Slider&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_4" type="text" name="range_4" value="10000;100000"/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;金额范围 1&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_1" type="text" name="range_1" value=""/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;金额范围 2&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true"/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;长度Slider&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_5" type="text" name="range_5" value=""/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;温度Slider&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_6" type="text" name="range_6" value=""/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group last"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;距离范围&lt;/label&gt;
+                            &lt;div class="col-md-9"&gt;
+                                &lt;input id="range_3" type="text" name="range_3" value="1000000;100000000"/&gt;
+                                &lt;pre class="well margin-top-20" id="result"&gt;
+                                &lt;/pre&gt;
+                                &lt;input type="button" class="btn btn-sm red" id="updateLast" value="Update this slider"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-actions"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="col-md-offset-3 col-md-9"&gt;
+                                &lt;button type="submit" class="btn green"&gt;Submit&lt;/button&gt;
+                                &lt;button type="button" class="btn default"&gt;Cancel&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- END PORTLET--&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
-<!--pre.prettyprint, code.prettyprint {-->
+        <!--<pre data-language="css" class="css tCont  rainbow prettyprint">
+pre.prettyprint, code.prettyprint {-->
         <!--background-color: #1e2328;-->
         <!-- -moz-border-radius: 8px;-->
         <!-- -webkit-border-radius: 8px;-->
@@ -75,8 +200,8 @@
         <!-- -ms-border-radius: 8px;-->
         <!-- -khtml-border-radius: 8px;-->
         <!--border-radius: 8px;-->
-<!--}-->
-			</pre>
+<!--}
+			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <div class="row">
                 <div class="col-md-12">

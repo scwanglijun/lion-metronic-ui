@@ -27,16 +27,13 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -46,31 +43,45 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+&lt;script type="text/javascript"&gt;
+    var pp='&lt;div class="buttonBox"&gt;&lt;button id="cancel" class="btn btn-cancel"&gt;取消&lt;/button&gt;&lt;button id="ok" class="btn btn-ok"&gt;确认&lt;/button&gt;&lt;/div&gt;';
+    $("#showtoast").click(function(){
+        tip("info","确认删除该问题吗？"+pp);
+        $('#cancel').click(function(){
+            alert('取消');
+        });
+        $('#ok').click(function(){
+            alert('这里添加动作');
+        });
+    });
+
+    $("#success").click(function(){
+        tip_success("恭喜你！保存成功！","success!");
+    });
+    $("#error").click(function(){
+        tip_error("出错了！","error!");
+    });
+    $("#info").click(function(){
+        tip_info("提示了！","info!");
+    });
+    $("#warning").click(function(){
+        tip_warning("恭喜你！警告了！","warning!");
+    });
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/toastr/toastr.css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/toastr/toastr.js"&gt;&lt;/script&gt;
+&lt;a class="btn btn-primary" id="showtoast"&gt;删除/取消&lt;/a&gt;
+&lt;a class="btn btn-success" id="success"&gt;success_show&lt;/a&gt;
+&lt;a class="btn btn-error" id="error"&gt;error_show&lt;/a&gt;
+&lt;a class="btn btn-info" id="info"&gt;info_show&lt;/a&gt;
+&lt;a class="btn btn-warning" id="warning"&gt;warning_show&lt;/a&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
+			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
         background-color: #1e2328;
         -moz-border-radius: 8px;
@@ -80,11 +91,11 @@ pre.prettyprint, code.prettyprint {
         -khtml-border-radius: 8px;
         border-radius: 8px;
 }
-			</pre>
+			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <a class="btn btn-primary" id="showtoast">删除/取消</a>
             <a class="btn btn-success" id="success">success_show</a>
-            <a class="btn btn-error" id="error">error_show</a>
+            <a class="btn btn-danger" id="error">error_show</a>
             <a class="btn btn-info" id="info">info_show</a>
             <a class="btn btn-warning" id="warning">warning_show</a>
             <script type="text/javascript">

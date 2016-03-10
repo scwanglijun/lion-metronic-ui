@@ -29,16 +29,21 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
-                <li>
+                <!--<li>
                     <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                </li>-->
+
+                <li>
+                    <a title="JS" data-trigger-type="js" href="#js">JS</a>
+                </li>
+
+                <li>
+                    <a title="ResponseJSON" data-trigger-type="response" href="#ResponseJSON">ResponseJSON</a>
                 </li>
 
                 <li>
@@ -48,41 +53,162 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+<!--$(function(){
    //初始化组件
    var backTop=one.ui.backTop({
         id:"one_backtop",
         isAnimate:false  //是否动画,默认为true
 	});
-});
+});-->
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/treegrid/easyui.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/icon.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/treegrid/demo.css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/treegrid/jquery.easyui.min.js"&gt;&lt;/script&gt;
+&lt;table class="easyui-treegrid" style="width:693px;height:378px"
+       data-options="
+            url: '../../../assets/plugins/metronic/json/treegrid_data1.json',
+            method: 'get',
+            rownumbers: true,
+            idField: 'id',
+            treeField: 'name'
+"&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th data-options="field:'inp'" width="40" align="center"&gt;&lt;input type="checkbox"&gt;&lt;/th&gt;
+        &lt;th data-options="field:'name'" width="200"&gt;资源名称（中文）&lt;/th&gt;
+        &lt;th data-options="field:'type'" width="80" &gt;资源类型&lt;/th&gt;
+        &lt;th data-options="field:'path'" width="220"&gt;路径&lt;/th&gt;
+        &lt;th data-options="field:'authority'" width="60"&gt;权限&lt;/th&gt;
+        &lt;th data-options="field:'rank'" width="60"&gt;排序&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+&lt;/table&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
-}
-			</pre>
+
+        <pre data-language="response" class="response tCont  rainbow prettyprint">
+[{
+	"id":1,
+    "inp":"&lt;input type=\"checkbox\"&gt;",
+	"name":"应用资源",
+	"type":"应用层",
+	"path":"Application",
+    "authority":"",
+    "rank":"0",
+  	"children":[{
+	  "id":2,
+	  "inp":"&lt;input type=\"checkbox\"&gt;",
+	  "name":"系统设置",
+	  "type":"菜单项",
+	  "path":"SystemConfig",
+	  "authority":"",
+	  "rank":"1",
+	  "children":[{
+		  "id":3,
+		  "inp":"&lt;input type=\"checkbox\"&gt;",
+		  "name":"DataGrid管理",
+		  "type":"菜单项",
+		  "path":"DataGridManage",
+		  "authority":"",
+		  "rank":"5",
+		  "children":[{
+			  "id":31,
+			  "inp":"&lt;input type=\"checkbox\"&gt;",
+			  "name":"DataColumn管理",
+			  "type":"菜单子项",
+			  "path":"/system/datacolumn/index.htm",
+			  "authority":"",
+			  "rank":"2"
+		  },{
+			  "id":32,
+			  "inp":"&lt;input type=\"checkbox\"&gt;",
+			  "name":"DataGrid",
+			  "type":"菜单子项",
+			  "path":"/system/datagrid/index.htm",
+			  "authority":"",
+			  "rank":"0"
+		  }]
+	  },{
+		"id":33,
+		"inp":"&lt;input type=\"checkbox\"&gt;",
+		"name":"部门管理",
+		"type":"菜单子项",
+		"path":"/system/department/index.htm",
+		"authority":"",
+		"rank":"1"
+	  },{
+		  "id":4,
+		  "inp":"&lt;input type=\"checkbox\"&gt;",
+		  "name":"系统监控",
+		  "type":"菜单项",
+		  "path":"SYSTEM_MONITOR",
+		  "authority":"",
+		  "rank":"5",
+		  "children":[{
+			  "id":41,
+			  "inp":"&lt;input type=\"checkbox\"&gt;",
+			  "name":"用户会话监控",
+			  "type":"菜单子项",
+			  "path":"/sessions/index.htm",
+			  "authority":"",
+			  "rank":"1"
+		  },{
+			  "id":42,
+			  "inp":"&lt;input type=\"checkbox\"&gt;",
+			  "name":"JVM内存监控",
+			  "type":"菜单子项",
+			  "path":"/monitor/jvm/memory.htm",
+			  "authority":"",
+			  "rank":"2"
+		  },{
+			  "id":43,
+			  "inp":"&lt;input type=\"checkbox\"&gt;",
+			  "name":"JVM监控",
+			  "type":"菜单子项",
+			  "path":"/monitor/jvm/index.htm",
+			  "authority":"",
+			  "rank":"3"
+		  },{
+			"id":44,
+			"inp":"&lt;input type=\"checkbox\"&gt;",
+			"name":"Hibernate监控",
+			"type":"菜单子项",
+			"path":"/monitor/hibernate/index.htm",
+			"authority":"",
+			"rank":"5"
+		  },{
+			"id":45,
+			"inp":"&lt;input type=\"checkbox\"&gt;",
+			"name":"数据库连接池",
+			"type":"菜单子项",
+			"path":"/druid/index.htm",
+			"authority":"",
+			"rank":"7"
+		  },{
+			"id":43,
+			"inp":"&lt;input type=\"checkbox\"&gt;",
+			"name":"JVM线程监控",
+			"type":"菜单子项",
+			"path":"/monitor/jvm/thread.htm",
+			"authority":"",
+			"rank":"4"
+		  },{
+			"id":43,
+			"inp":"&lt;input type=\"checkbox\"&gt;",
+			"name":"缓存监控",
+			"type":"菜单子项",
+			"path":"monitor/cache/index.htm",
+			"authority":"",
+			"rank":"8"
+		  }]
+	  }]
+	}]
+}]
+        </pre>
+
         <div data-language="result" class="tCont result prettyprint" >
             <style>
                 .datagrid-view{

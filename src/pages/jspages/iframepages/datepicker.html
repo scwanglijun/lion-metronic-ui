@@ -25,16 +25,13 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -44,31 +41,24 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+&lt;script&gt;
+    $('#sandbox-container input').datepicker({});
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
+
+&lt;div id="sandbox-container"&gt;
+    &lt;input type="text"/&gt;
+&lt;/div&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
+			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
         background-color: #1e2328;
         -moz-border-radius: 8px;
@@ -78,7 +68,7 @@ pre.prettyprint, code.prettyprint {
         -khtml-border-radius: 8px;
         border-radius: 8px;
 }
-			</pre>
+			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <div id="sandbox-container">
                 <input type="text"/>

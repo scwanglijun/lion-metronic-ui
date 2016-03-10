@@ -24,16 +24,13 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -43,40 +40,47 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
-			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
-}
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;!-- 按钮触发模态框 --&gt;
+&lt;button class="btn btn-primary" data-toggle="modal"
+        data-target="#myModal"&gt;
+    开始演示模态框
+&lt;/button&gt;
+
+&lt;!-- 模态框（Modal） --&gt;
+&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true"&gt;
+                &times;
+                &lt;/button&gt;
+                &lt;h4 class="modal-title" id="myModalLabel"&gt;
+                    模态框（Modal）标题
+                &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                在这里添加一些文本
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default"
+                        data-dismiss="modal"&gt;关闭
+                &lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;
+                    提交更改
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+    &lt;/div&gt;&lt;!-- /.modal --&gt;
+&lt;/div&gt;
 			</pre>
         <div data-language="result" class="tCont result prettyprint" >
             <h5>创建模态框（Modal）</h5>

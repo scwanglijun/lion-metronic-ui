@@ -35,16 +35,13 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -54,31 +51,220 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+&lt;script&gt;
+    var form2 = $('#form_sample_2');
+    var error2 = $('.alert-danger', form2);
+    var success2 = $('.alert-success', form2);
+
+    form2.validate({
+        errorElement: 'span', //default input error message container
+        errorClass: 'help-block help-block-error', // default input error message class
+        focusInvalid: false, // do not focus the last invalid input
+        ignore: "",  // validate all fields including form hidden input
+        rules: {
+            name: {
+                minlength: 2,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            url: {
+                required: true,
+                url: true
+            },
+            number: {
+                required: true,
+                number: true
+            },
+            digits: {
+                required: true,
+                digits: true
+            },
+            creditcard: {
+                required: true,
+                creditcard: true
+            },
+        },
+
+        invalidHandler: function (event, validator) { //display error alert on form submit
+            success2.hide();
+            error2.show();
+            Metronic.scrollTo(error2, -200);
+        },
+
+        errorPlacement: function (error, element) { // render error placement for each input type
+            var icon = $(element).parent('.input-icon').children('i');
+            icon.removeClass('fa-check').addClass("fa-warning");
+            icon.attr("data-original-title", error.text()).tooltip({'container': 'body'});
+        },
+
+        highlight: function (element) { // hightlight error inputs
+            $(element)
+                    .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group
+        },
+
+        unhighlight: function (element) { // revert the change done by hightlight
+
+        },
+
+        success: function (label, element) {
+            var icon = $(element).parent('.input-icon').children('i');
+            $(element).closest('.form-group').removeClass('has-error').addClass('has-success'); // set success class to the control group
+            icon.removeClass("fa-warning").addClass("fa-check");
+        },
+
+        submitHandler: function (form) {
+            success2.show();
+            error2.hide();
+            form[0].submit(); // submit the form
+        }
+    });
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/components-rounded.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_css/combonew/select2.css" rel="stylesheet" type="text/css" /&gt;
+
+
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery.ui.touch-punch.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery.slimscroll.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/validation/jquery.validate.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/validation/additional-methods.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/combonew/select2.min.js" type="text/javascript"&gt;&lt;/script&gt;
+
+
+&lt;div class="row"&gt;
+    &lt;div class="col-md-12"&gt;
+        &lt;!-- BEGIN VALIDATION STATES--&gt;
+        &lt;div class="portlet box yellow"&gt;
+            &lt;div class="portlet-title"&gt;
+                &lt;div class="caption"&gt;
+                    &lt;i class="fa fa-gift"&gt;&lt;/i&gt;图标显示校验
+                &lt;/div&gt;
+                &lt;div class="tools"&gt;
+                    &lt;a href="javascript:;" class="collapse"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#portlet-config" data-toggle="modal" class="config"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="javascript:;" class="reload"&gt;
+                    &lt;/a&gt;
+                    &lt;a href="javascript:;" class="remove"&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="portlet-body form"&gt;
+                &lt;!-- BEGIN FORM--&gt;
+                &lt;form id="form_sample_2" class="form-horizontal"&gt;
+                    &lt;div class="form-body"&gt;
+                        &lt;div class="alert alert-danger display-hide"&gt;
+                            &lt;button class="close" data-close="alert"&gt;&lt;/button&gt;
+                            表单出错. 请检查.
+                        &lt;/div&gt;
+                        &lt;div class="alert alert-success display-hide"&gt;
+                            &lt;button class="close" data-close="alert"&gt;&lt;/button&gt;
+                            表单校验成功！
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;Name &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="name"/&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;Email &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="email"/&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;URL &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="url"/&gt;
+                                &lt;/div&gt;
+                                &lt;span class="help-block"&gt;
+                                e.g: http://www.demo.com or http://demo.com &lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;Number &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="number"/&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;Digits &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="digits"/&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label class="control-label col-md-3"&gt;Credit Card &lt;span class="required"&gt;
+                            * &lt;/span&gt;
+                            &lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="input-icon right"&gt;
+                                    &lt;i class="fa"&gt;&lt;/i&gt;
+                                    &lt;input type="text" class="form-control" name="creditcard"/&gt;
+                                &lt;/div&gt;
+                                &lt;span class="help-block"&gt;
+                                e.g: 5500 0000 0000 0004 &lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-actions"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="col-md-offset-3 col-md-9"&gt;
+                                &lt;button type="submit" class="btn green"&gt;Submit&lt;/button&gt;
+                                &lt;button type="button" class="btn default"&gt;Cancel&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;!-- END FORM--&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- END VALIDATION STATES--&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
+			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
         background-color: #1e2328;
         -moz-border-radius: 8px;
@@ -88,7 +274,7 @@ pre.prettyprint, code.prettyprint {
         -khtml-border-radius: 8px;
         border-radius: 8px;
 }
-			</pre>
+			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <style>
                 .form-control{

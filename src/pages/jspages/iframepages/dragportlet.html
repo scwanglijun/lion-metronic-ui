@@ -30,16 +30,12 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
-
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#JS">JS</a>
                 </li>
 
                 <li>
@@ -49,31 +45,73 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+&lt;script&gt;
+    $("#sortable_portlets").sortable({
+        connectWith: ".portlet",
+        items: ".portlet",
+        opacity: 0.8,
+        coneHelperSize: true,
+        placeholder: 'portlet-sortable-placeholder',
+        forcePlaceholderSize: true,
+        tolerance: "pointer",
+        helper: "clone",
+        tolerance: "pointer",
+        forcePlaceholderSize: !0,
+        helper: "clone",
+        cancel: ".portlet-sortable-empty, .portlet-fullscreen", // cancel dragging if portlet is in fullscreen mode
+        revert: 250, // animation in milliseconds
+        update: function(b, c) {
+            if (c.item.prev().hasClass("portlet-sortable-empty")) {
+                c.item.prev().before(c.item);
+            }
+        }
+    });
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/components-rounded.css" rel="stylesheet" type="text/css"/&gt;
+&lt;link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery.ui.touch-punch.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="../../../assets/plugins/metronic/UI_js/jquery.slimscroll.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;div class="row" id="sortable_portlets"&gt;
+    &lt;div class="col-md-3 sortable"&gt;
+        &lt;!-- BEGIN Portlet PORTLET--&gt;
+        &lt;div class="portlet portlet-sortable light bordered"&gt;
+            &lt;div class="portlet-title"&gt;
+                &lt;div class="caption font-green-sharp"&gt;
+                    &lt;i class="icon-speech font-green-sharp"&gt;&lt;/i&gt;
+                    &lt;span class="caption-subject bold uppercase"&gt; Portlet&lt;/span&gt;
+                    &lt;span class="caption-helper"&gt;details...&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="actions"&gt;
+                    &lt;a href="#" class="btn btn-circle btn-default btn-sm"&gt;
+                        &lt;i class="fa fa-plus"&gt;&lt;/i&gt; 新增 &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="portlet-body"&gt;
+                &lt;div class="scroller" style="height:200px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd"&gt;
+                    &lt;h4&gt;Heading Text&lt;/h4&gt;
+                    &lt;p&gt;
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- END Portlet PORTLET--&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
+
+			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
         background-color: #1e2328;
         -moz-border-radius: 8px;
@@ -83,7 +121,8 @@ pre.prettyprint, code.prettyprint {
         -khtml-border-radius: 8px;
         border-radius: 8px;
 }
-			</pre>
+			</pre>-->
+
         <div data-language="result" class="tCont result prettyprint" >
             <div class="row" id="sortable_portlets">
                 <div class="col-md-3 sortable">

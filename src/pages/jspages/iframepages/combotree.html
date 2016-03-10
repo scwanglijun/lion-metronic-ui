@@ -40,16 +40,21 @@
                 <li class="active">
                     <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
-                <li>
+                <!--<li>
                     <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                </li>-->
+
+                <li>
+                    <a title="JS" data-trigger-type="js" href="#js">JS</a>
+                </li>
+
+                <li>
+                    <a title="ResponseJSON" data-trigger-type="response" href="#ResponseJSON">ResponseJSON</a>
                 </li>
 
                 <li>
@@ -72,28 +77,74 @@
         <!--resources-->
         <!--</div>-->
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_js/combotree/ztree/css/metro.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/combotree/bootstrap-select.min.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/combotree/lion.css"/&gt;
+&lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/combotree/combotree.css"/&gt;
+
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/jquery-2.1.4.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/combotree/ztree/js/jquery.ztree.all-3.5.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/combotree/lion.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/combotree/combotree.js"&gt;&lt;/script&gt;
+&lt;div class="box"&gt;
+    &lt;input  id="parentResourceId"  name="parentResourceId" placeholder="请选择父级资源…"  type="text" class="lion-combotree form-control" data-loadurl="../../../assets/plugins/metronic/json/combotree.json" data-width="240px" data-height="300px"/&gt;
+&lt;/div&gt;
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
-pre.prettyprint, code.prettyprint {
-        background-color: #1e2328;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
-}
-			</pre>
+
+        <pre data-language="response" class="response tCont  rainbow prettyprint">
+[
+    {"id":1,"name":"应用资源","open":true,"pid":0,"pId":0},
+    {"id":2,"name":"系统设置","open":false,"pid":1,"pId":1},
+    {"id":9,"name":"用户管理","open":false,"pid":2,"pId":2},
+    {"id":10,"name":"编码管理","open":false,"pid":2,"pId":2},
+    {"id":11,"name":"资源管理","open":false,"pid":2,"pId":2},
+    {"id":12,"name":"系统参数","open":false,"pid":2,"pId":2},
+    {"id":13,"name":"控制面板","open":false,"pid":1,"pId":1},
+    {"id":14,"name":"角色管理","open":false,"pid":9,"pId":9},
+    {"id":15,"name":"用户组管理","open":false,"pid":9,"pId":9},
+    {"id":16,"name":"通用编码类型","open":false,"pid":10,"pId":10},
+    {"id":17,"name":"编码列表","open":false,"pid":10,"pId":10},
+    {"id":18,"name":"用户管理","open":false,"pid":9,"pId":9},
+    {"id":19,"name":"部门管理","open":false,"pid":2,"pId":2},
+    {"id":20,"name":"DataGrid管理","open":false,"pid":2,"pId":2},
+    {"id":21,"name":"DataGrid","open":false,"pid":20,"pId":20},
+    {"id":24,"name":"DataColumn管理","open":false,"pid":20,"pId":20},
+    {"id":25,"name":"报表设计","open":false,"pid":4,"pId":4},
+    {"id":26,"name":"系统信息","open":false,"pid":2,"pId":2},
+    {"id":27,"name":"菜单1","open":false,"pid":5,"pId":5},
+    {"id":32,"name":"网页菜单1","open":false,"pid":7,"pId":7},
+    {"id":33,"name":"菜单子项3","open":false,"pid":32,"pId":32},
+    {"id":36,"name":"系统监控","open":false,"pid":2,"pId":2},
+    {"id":37,"name":"用户会话监控","open":false,"pid":36,"pId":36},
+    {"id":38,"name":"JVM内存监控","open":false,"pid":36,"pId":36},
+    {"id":39,"name":"JVM监控","open":false,"pid":36,"pId":36},
+    {"id":41,"name":"应用大厅","open":false,"pid":40,"pId":40},
+    {"id":43,"name":"项目属性配置","open":false,"pid":2,"pId":2},
+    {"id":44,"name":"账户管理","open":false,"pid":1,"pId":1},
+    {"id":45,"name":"个人资料","open":false,"pid":44,"pId":44},
+    {"id":47,"name":"通知消息","open":false,"pid":44,"pId":44},
+    {"id":48,"name":"待办事项","open":false,"pid":44,"pId":44},
+    {"id":49,"name":"数据库连接池","open":false,"pid":36,"pId":36},
+    {"id":50,"name":"Hibernate监控","open":false,"pid":36,"pId":36},
+    {"id":51,"name":"缓存监控","open":false,"pid":36,"pId":36},
+    {"id":52,"name":"JVM线程监控","open":false,"pid":36,"pId":36},
+    {"id":53,"name":"添加","open":false,"pid":16,"pId":16},
+    {"id":54,"name":"编辑","open":false,"pid":16,"pId":16},
+    {"id":55,"name":"刷新","open":false,"pid":16,"pId":16},
+    {"id":56,"name":"Excel","open":false,"pid":16,"pId":16},
+    {"id":57,"name":"删除","open":false,"pid":16,"pId":16},
+    {"id":59,"name":"图标管理","open":false,"pid":2,"pId":2},
+    {"id":60,"name":"添加","open":false,"pid":17,"pId":17},
+    {"id":61,"name":"刷新","open":false,"pid":17,"pId":17},
+    {"id":62,"name":"编辑","open":false,"pid":17,"pId":17},
+    {"id":63,"name":"计划任务","open":false,"pid":2,"pId":2},
+    {"id":64,"name":"员工信息","open":false,"pid":44,"pId":44},
+    {"id":65,"name":"票据系统","open":false,"pid":2,"pId":2},
+    {"id":66,"name":"自持页面","open":false,"pid":65,"pId":65}
+]
+        </pre>
+
         <div data-language="result" class="tCont result prettyprint" >
             <style>
                 .btn-group{
