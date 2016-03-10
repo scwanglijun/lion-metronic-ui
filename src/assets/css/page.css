@@ -699,7 +699,7 @@ ul.demo li {
   margin-left: 0;
 }
 .content iframe {
-  margin: 1em 0;
+  margin: 0;
 }
 .content p.tip {
   padding: 12px 24px 12px 30px;
