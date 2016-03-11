@@ -337,6 +337,9 @@
     }
 }));
 
+
+
+
 function tip(type,content,title) {
 
     toastr[type](content, title);

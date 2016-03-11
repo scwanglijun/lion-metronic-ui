@@ -24,8 +24,8 @@
     <div id="head">
         <div id="actions">
             <ul class="normalRes">
-                <li class="active">
-                    <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+                <li>
+                    <span title="Lion-ui-demo">Lion-ui-demo</span>
                 </li>
 
                 <li>
@@ -45,28 +45,46 @@
     <div id="tabs" style="">
 			<pre data-language="js" class="prettyprint js tCont rainbow ">
 &lt;script type="text/javascript"&gt;
-    var pp='&lt;div class="buttonBox"&gt;&lt;button id="cancel" class="btn btn-cancel"&gt;取消&lt;/button&gt;&lt;button id="ok" class="btn btn-ok"&gt;确认&lt;/button&gt;&lt;/div&gt;';
-    $("#showtoast").click(function(){
-        tip("info","确认删除该问题吗？"+pp);
-        $('#cancel').click(function(){
-            alert('取消');
-        });
-        $('#ok').click(function(){
-            alert('这里添加动作');
-        });
-    });
+    $(function(){
+        //参数设置，若用默认值可以省略以下面代
+        toastr.options = {
+        "closeButton": true, //是否显示关闭按钮
+        "debug": false, //是否使用debug模式
+        "positionClass": "toast-top-full-width",//弹出窗的位置
+        "showDuration": "300",//显示的动画时间
+        "hideDuration": "1000",//消失的动画时间
+        "timeOut": "5000", //展现时间
+        "extendedTimeOut": "1000",//加长展示时间
+        "showEasing": "swing",//显示时的动画缓冲方式
+        "hideEasing": "linear",//消失时的动画缓冲方式
+        "showMethod": "fadeIn",//显示时的动画方式
+        "hideMethod": "fadeOut" //消失时的动画方式
+        };
 
-    $("#success").click(function(){
-        tip_success("恭喜你！保存成功！","success!");
-    });
-    $("#error").click(function(){
-        tip_error("出错了！","error!");
-    });
-    $("#info").click(function(){
-        tip_info("提示了！","info!");
-    });
-    $("#warning").click(function(){
-        tip_warning("恭喜你！警告了！","warning!");
+        //成功提示绑定
+        $("#success").click(function(){
+             toastr.success("祝贺你成功了");
+        })
+
+        //信息提示绑定
+        $("#info").click(function(){
+            toastr.info("这是一个提示信息");
+        })
+
+        //敬告提示绑定
+        $("#warning").click(function(){
+            toastr.warning("警告你别来烦我了");
+        })
+
+        //错语提示绑定
+        $("#error").click(function(){
+            toastr.error("出现错误，请更改");
+        })
+
+        //清除窗口绑定
+        $("#clear").click(function(){
+            toastr.clear();
+        })
     });
 &lt;/script&gt;
 			</pre>
@@ -74,12 +92,13 @@
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
 &lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
 &lt;link rel="stylesheet" href="../../../assets/plugins/metronic/UI_css/toastr/toastr.css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/toastr/toastr.js"&gt;&lt;/script&gt;
-&lt;a class="btn btn-primary" id="showtoast"&gt;删除/取消&lt;/a&gt;
 &lt;a class="btn btn-success" id="success"&gt;success_show&lt;/a&gt;
-&lt;a class="btn btn-error" id="error"&gt;error_show&lt;/a&gt;
+&lt;a class="btn btn-danger" id="error"&gt;error_show&lt;/a&gt;
 &lt;a class="btn btn-info" id="info"&gt;info_show&lt;/a&gt;
 &lt;a class="btn btn-warning" id="warning"&gt;warning_show&lt;/a&gt;
+&lt;a class="btn btn-primary" id="clear"&gt;clear_show&lt;/a&gt;
 			</pre>
 			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
@@ -93,35 +112,53 @@ pre.prettyprint, code.prettyprint {
 }
 			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
-            <a class="btn btn-primary" id="showtoast">删除/取消</a>
             <a class="btn btn-success" id="success">success_show</a>
             <a class="btn btn-danger" id="error">error_show</a>
             <a class="btn btn-info" id="info">info_show</a>
             <a class="btn btn-warning" id="warning">warning_show</a>
+            <a class="btn btn-primary" id="clear">clear_show</a>
             <script type="text/javascript">
-                var pp='<div class="buttonBox"><button id="cancel" class="btn btn-cancel">取消</button><button id="ok" class="btn btn-ok">确认</button></div>';
-                $("#showtoast").click(function(){
-                    tip("info","确认删除该问题吗？"+pp);
-                    $('#cancel').click(function(){
-                        alert('取消');
-                    });
-                    $('#ok').click(function(){
-                        alert('这里添加动作');
-                    });
-                });
+                $(function(){
+                    //参数设置，若用默认值可以省略以下面代
+                    toastr.options = {
+                        "closeButton": true, //是否显示关闭按钮
+                        "debug": false, //是否使用debug模式
+                        "positionClass": "toast-top-full-width",//弹出窗的位置
+                        "showDuration": "300",//显示的动画时间
+                        "hideDuration": "1000",//消失的动画时间
+                        "timeOut": "5000", //展现时间
+                        "extendedTimeOut": "1000",//加长展示时间
+                        "showEasing": "swing",//显示时的动画缓冲方式
+                        "hideEasing": "linear",//消失时的动画缓冲方式
+                        "showMethod": "fadeIn",//显示时的动画方式
+                        "hideMethod": "fadeOut" //消失时的动画方式
+                    };
 
-                $("#success").click(function(){
-                    tip_success("恭喜你！保存成功！","success!");
-                });
-                $("#error").click(function(){
-                    tip_error("出错了！","error!");
-                });
-                $("#info").click(function(){
-                    tip_info("提示了！","info!");
-                });
-                $("#warning").click(function(){
-                    tip_warning("恭喜你！警告了！","warning!");
-                });
+                    //成功提示绑定
+                    $("#success").click(function(){
+                        toastr.success("祝贺你成功了");
+                    })
+
+                    //信息提示绑定
+                    $("#info").click(function(){
+                        toastr.info("这是一个提示信息");
+                    })
+
+                    //敬告提示绑定
+                    $("#warning").click(function(){
+                        toastr.warning("警告你别来烦我了");
+                    })
+
+                    //错语提示绑定
+                    $("#error").click(function(){
+                        toastr.error("出现错误，请更改");
+                    })
+
+                    //清除窗口绑定
+                    $("#clear").click(function(){
+                        toastr.clear();
+                    })
+                })
             </script>
         </div>
     </div>

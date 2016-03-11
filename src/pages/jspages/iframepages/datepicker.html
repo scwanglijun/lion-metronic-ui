@@ -22,8 +22,8 @@
     <div id="head">
         <div id="actions">
             <ul class="normalRes">
-                <li class="active">
-                    <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+                <li>
+                    <span title="Lion-ui-demo">Lion-ui-demo</span>
                 </li>
 
                 <li>
@@ -42,9 +42,12 @@
     </div>
     <div id="tabs" style="">
 			<pre data-language="js" class="prettyprint js tCont rainbow ">
-&lt;script&gt;
-    $('#sandbox-container input').datepicker({});
-&lt;/script&gt;
+$('#sandbox-container input').datepicker({
+    autoclose: true,//选中之后自动隐藏日期选择框
+    clearBtn: true,//清除按钮
+    todayBtn: true,//今日按钮
+    format: "yyyy-mm-dd"//日期格式
+});
 			</pre>
 
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
@@ -74,7 +77,13 @@ pre.prettyprint, code.prettyprint {
                 <input type="text"/>
             </div>
             <script>
-                $('#sandbox-container input').datepicker({});
+                $('#sandbox-container input').datepicker({
+                    language: "zh-CN",
+                    autoclose: true,//选中之后自动隐藏日期选择框
+                    clearBtn: true,//清除按钮
+                    todayBtn: true,//今日按钮
+                    format: "yyyy-mm-dd"//日期格式
+                });
             </script>
         </div>
     </div>

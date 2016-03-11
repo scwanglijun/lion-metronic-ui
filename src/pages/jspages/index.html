@@ -26,6 +26,9 @@
         .table{
             width:100%;
         }
+        h4{
+            color: #42b983;
+        }
     </style>
 </head>
 <body>
@@ -779,9 +782,125 @@ $('#tt').treegrid({
         <h2 id="toastr">Toastr消息提醒</h2>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>closeButton</td>
+                <td>false  //是否显示关闭按钮。</td>
+            </tr>
+            <tr>
+                <td>debug</td>
+                <td>false  //是否使用debug模式。</td>
+            </tr>
+            <tr>
+                <td>positionClass</td>
+                <td>"toast-top-full-width"  //弹出窗的位置</td>
+            </tr>
+            <tr>
+                <td>showDuration</td>
+                <td>"300"  //显示的动画时间</td>
+            </tr>
+            <tr>
+                <td>hideDuration</td>
+                <td>"1000"  //消失的动画时间</td>
+            </tr>
+            <tr>
+                <td>timeOut</td>
+                <td>"500"  //展现时间。</td>
+            </tr>
+            <tr>
+                <td>extendedTimeOut</td>
+                <td>"1000"  //加长展示时间</td>
+            </tr>
+            <tr>
+                <td>showEasing</td>
+                <td>"swing"  //显示时的动画缓冲方式</td>
+            </tr>
+            <tr>
+                <td>hideEasing</td>
+                <td> "linear"  //消失时的动画缓冲方式</td>
+            </tr>
+            <tr>
+                <td>showMethod</td>
+                <td>"fadeIn" //显示时的动画方式</td>
+            </tr>
+            <tr>
+                <td>hideMethod</td>
+                <td>"fadeOut" //消失时的动画方式</td>
+            </tr>
+            </tbody>
+        </table>
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>参数</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>success</td>
+                <td>string</td>
+                <td>成功信息提醒!</td>
+            </tr>
+            <tr>
+                <td>error</td>
+                <td>string</td>
+                <td>错误信息提醒!</td>
+            </tr>
+            <tr>
+                <td>info</td>
+                <td>string</td>
+                <td>通知提示信息!</td>
+            </tr>
+            <tr>
+                <td>warning</td>
+                <td>string</td>
+                <td>警告信息提醒!</td>
+            </tr>
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+//成功提示绑定
+$("#success").click(function(){
+     toastr.success("祝贺你成功了");
+})
+
+//信息提示绑定
+$("#info").click(function(){
+    toastr.info("这是一个提示信息");
+})
+
+//敬告提示绑定
+$("#warning").click(function(){
+    toastr.warning("警告你别来烦我了");
+})
+
+//错语提示绑定
+$("#error").click(function(){
+    toastr.error("出现错误，请更改");
+})
+
+//清除窗口绑定
+$("#clear").click(function(){
+    toastr.clear();
+})
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -793,9 +912,106 @@ $('#tt').treegrid({
         <h3 id="datepicker">datepicker</h3>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>类型</td>
+                <td>默认值</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>autoclose</td>
+                <td>Boolean</td>
+                <td>false</td>
+                <td>选中之后自动隐藏日期选择框</td>
+            </tr>
+            <tr>
+                <td>clearBtn</td>
+                <td>Boolean</td>
+                <td>false</td>
+                <td>清除按钮</td>
+            </tr>
+            <tr>
+                <td>todayBtn</td>
+                <td>Boolean</td>
+                <td>false</td>
+                <td>今日按钮</td>
+            </tr>
+            <tr>
+                <td>format</td>
+                <td>string</td>
+                <td>‘mm/dd/yyyy’</td>
+                <td>日期格式, 由d, dd, m, mm, yy, yyy等组合</td>
+            </tr>
+            <tr>
+                <td>weekStart</td>
+                <td>integer</td>
+                <td>0</td>
+                <td>一周开始星期. 0 是星期天 – 6 是星期六</td>
+            </tr>
+            <tr>
+                <td>viewMode</td>
+                <td>string or integer</td>
+                <td>0 = ‘days’</td>
+                <td>设置开始呈现的视图模式. 接受: ‘days’, ‘months’, ‘years’, 0 是 days, 1 是 months and 2 是 years</td>
+            </tr>
+            <tr>
+                <td>minViewMode</td>
+                <td>string or integer</td>
+                <td>0 = ‘days’</td>
+                <td>设置一个限制呈现的视图模式. 接受: ‘days’, ‘months’, ‘years’, 0 是 days, 1 是 months and 2 是 years</td>
+            </tr>
+            </tbody>
+        </table>
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>.datepicker(options)</td>
+                <td>初始化一个DataPicker</td>
+            </tr>
+            <tr>
+                <td>.datepicker(‘show’)</td>
+                <td>显示Datepicker</td>
+            </tr>
+            <tr>
+                <td>.datepicker(‘hide’)</td>
+                <td>隐藏Datepicker</td>
+            </tr>
+            <tr>
+                <td>.datepicker(‘place’)</td>
+                <td>更新日期选取器的相对位置的元素</td>
+            </tr>
+            <tr>
+                <td>.datepicker(‘setValue’, value)</td>
+                <td>设置Datepicker新值。它可以在指定的格式或约会对象的字符串</td>
+            </tr>
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+$('#sandbox-container input').datepicker({
+    autoclose: true,//选中之后自动隐藏日期选择框
+    clearBtn: true,//清除按钮
+    todayBtn: true,//今日按钮
+    format: "yyyy-mm-dd"//日期格式
+});
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -806,9 +1022,141 @@ $('#tt').treegrid({
         <h3 id="daterangepicker">daterangepicker</h3>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>类型</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>startDate</td>
+                <td>Date object, moment object or string</td>
+                <td>开始日期</td>
+            </tr>
+            <tr>
+                <td>endDate</td>
+                <td>Date object, moment object or string</td>
+                <td>结束日期</td>
+            </tr>
+            <tr>
+                <td>minDate</td>
+                <td>Date object, moment object or string</td>
+                <td>用户可选择的最早日期</td>
+            </tr>
+            <tr>
+                <td>maxDate</td>
+                <td>Date object, moment object or string</td>
+                <td>用户可选择的最晚日期</td>
+            </tr>
+            <tr>
+                <td>showDropdowns</td>
+                <td>boolean</td>
+                <td>日历上方显示年和月的下拉选择框</td>
+            </tr>
+            <tr>
+                <td>showWeekNumbers</td>
+                <td>boolean</td>
+                <td>显示每月开始的周数</td>
+            </tr>
+            <tr>
+                <td>timePicker</td>
+                <td>boolean</td>
+                <td>允许选择时间而不仅仅是日期</td>
+            </tr>
+            <tr>
+                <td>timePickerSeconds</td>
+                <td>boolean</td>
+                <td>显示秒</td>
+            </tr>
+            <tr>
+                <td>buttonClasses</td>
+                <td>array</td>
+                <td>给按钮添加class属性</td>
+            </tr>
+            <tr>
+                <td>applyClass</td>
+                <td>array</td>
+                <td>确定按钮的样式class</td>
+            </tr>
+            <tr>
+                <td>cancelClass</td>
+                <td>array</td>
+                <td>取消按钮的样式class</td>
+            </tr>
+            </tbody>
+        </table>
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>.setStartDate(Date/moment/string)</td>
+                <td>设置选择的开始日期</td>
+            </tr>
+            <tr>
+                <td>.setEndDate(Date/moment/string)</td>
+                <td>设置选择的结束日期</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <h4>事件</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>show.daterangepicker</td>
+                <td>当picker显示时触发</td>
+            </tr>
+            <tr>
+                <td>hide.daterangepicker</td>
+                <td>当picker隐藏时触发</td>
+            </tr>
+            <tr>
+                <td>showCalendar.daterangepicker</td>
+                <td>当日历显示时触发</td>
+            </tr>
+            <tr>
+                <td>hideCalendar.daterangepicker</td>
+                <td>当日历隐藏时触发</td>
+            </tr>
+            <tr>
+                <td>apply.daterangepicker</td>
+                <td>确认按钮点击时触发</td>
+            </tr>
+            <tr>
+                <td>cancel.daterangepicker</td>
+                <td>取消按钮点击时触发</td>
+            </tr>
+
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+$('#daterange').daterangepicker();
+$('#daterange').on('apply.daterangepicker', function(ev, picker) {
+  console.log(picker.startDate.format('YYYY-MM-DD'));
+  console.log(picker.endDate.format('YYYY-MM-DD'));
+});
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -819,9 +1167,97 @@ $('#tt').treegrid({
         <h3 id="datetimepicker">datetimepicker</h3>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>format</td>
+                <td>日期格式， p, P, h, hh, i, ii, s, ss, d, dd, m, mm, M, MM, yy, yyyy 的任意组合。</td>
+            </tr>
+            <tr>
+                <td>weekStart</td>
+                <td>一周从哪一天开始。0（星期日）到6（星期六）</td>
+            </tr>
+            <tr>
+                <td>autoclose</td>
+                <td>当选择一个日期之后是否立即关闭此日期时间选择器。</td>
+            </tr>
+            <tr>
+                <td>startView</td>
+                <td>日期时间选择器打开之后首先显示的视图。</td>
+            </tr>
+            <tr>
+                <td>minView</td>
+                <td>日期时间选择器所能够提供的最精确的时间选择视图。</td>
+            </tr>
+            <tr>
+                <td>maxView</td>
+                <td>日期时间选择器最高能展示的选择范围视图。</td>
+            </tr>
+            <tr>
+                <td>forceParse</td>
+                <td>当选择器关闭的时候，是否强制解析输入框中的值。</td>
+            </tr>
+            </tbody>
+        </table>
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody><tr>
+                <td>名称</td>
+                <td>参数</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>remove</td>
+                <td>none</td>
+                <td>移除日期时间选择器。同时移除已经绑定的event、内部绑定的对象和HTML元素。</td>
+            </tr>
+            <tr>
+                <td>show</td>
+                <td>none</td>
+                <td>显示日期时间选择器。</td>
+            </tr>
+            <tr>
+                <td>update</td>
+                <td>none</td>
+                <td>使用当前输入框中的值更新日期时间选择器。</td>
+            </tr>
+            <tr>
+                <td>setStartDate</td>
+                <td>startDate (String)</td>
+                <td>给日期时间选择器设置一个新的起始日期。</td>
+            </tr>
+            <tr>
+                <td>setEndDate</td>
+                <td>endDate (String)</td>
+                <td>给日期时间选择器设置结束日期。</td>
+            </tr>
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+&lt;script&gt;
+    $(".form_datetime").datetimepicker({
+        autoclose: true,
+        isRTL: 'left',
+        format: "dd MM yyyy - hh:ii",
+        pickerPosition: "bottom-right"
+    });
+&lt;/script&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -833,9 +1269,135 @@ $('#tt').treegrid({
         <h2 id="slider">滑动杆sliders</h2>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody><tr>
+                <td>名称</td>
+                <td>参数</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td>object</td>
+                <td>最大最小值</td>
+            </tr>
+            <tr>
+                <td>Start</td>
+                <td>number,array[number],array[number, number]</td>
+                <td>初始化位置</td>
+            </tr>
+            <tr>
+                <td>Connect</td>
+                <td>"lower", "upper", true, false</td>
+                <td>控制绿条在杆的左半部分还是右半部分</td>
+            </tr>
+            <tr>
+                <td>Margin</td>
+                <td>number</td>
+                <td>两个控制杆之间的最小距离。</td>
+            </tr>
+            <tr>
+                <td>Limit</td>
+                <td>number</td>
+                <td>两个控制杆之间的最大距离。</td>
+            </tr>
+            <tr>
+                <td>Step</td>
+                <td>number</td>
+                <td>每一步距离。</td>
+            </tr>
+            <tr>
+                <td>Orientation</td>
+                <td>"vertical", "horizontal"</td>
+                <td>控制水平还是垂直slider</td>
+            </tr>
+            <tr>
+                <td>Direction</td>
+                <td>"ltr", "rtl"</td>
+                <td>控制是从左到右还是从右到左</td>
+            </tr>
+            <tr>
+                <td>Tooltips</td>
+                <td>false, true, formatter, array[formatter or false]</td>
+                <td>数字小提示</td>
+            </tr>
+            <tr>
+                <td>Animate</td>
+                <td>true, false</td>
+                <td>开启动画效果。</td>
+            </tr>
+            </tbody>
+        </table>
 
-        <h4>方法</h4>
-        <h4>方法使用</h4>
+        <h4>事件</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>update</td>
+                <td>滑竿数字在更新时触发</td>
+            </tr>
+            <tr>
+                <td>slide</td>
+                <td>滑竿滑动过程中触发</td>
+            </tr>
+            <tr>
+                <td>set</td>
+                <td>滑竿设置了新值时触发</td>
+            </tr>
+            <tr>
+                <td>change</td>
+                <td>滑竿数值改变了时触发</td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>开始滑动时触发</td>
+            </tr>
+            <tr>
+                <td>end</td>
+                <td>结束滑动时触发</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>事件触发</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+&lt;script&gt;
+    slider.noUiSlider.on('update', function(){
+	    addClassFor(lUpdate, 'tShow', 450);
+    });
+
+    slider.noUiSlider.on('slide', function(){
+        addClassFor(lSlide, 'tShow', 450);
+    });
+
+    slider.noUiSlider.on('set', function(){
+        addClassFor(lSet, 'tShow', 450);
+    });
+
+    slider.noUiSlider.on('change', function(){
+        addClassFor(lChange, 'tShow', 450);
+    });
+
+    slider.noUiSlider.on('start', function(){
+        addClassFor(lStart, 'tShow', 450);
+    });
+
+    slider.noUiSlider.on('end', function(){
+        addClassFor(lEnd, 'tShow', 450);
+    });
+&lt;/script&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -846,9 +1408,99 @@ $('#tt').treegrid({
         <h2 id="modal">modal</h2>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>名称</td>
+                    <td>描述</td>
+                </tr>
+                <tr>
+                    <td>backdrop</td>
+                    <td>是否要背景遮罩</td>
+                </tr>
+                <tr>
+                    <td>keyboard</td>
+                    <td>是否支持键盘</td>
+                </tr>
+                <tr>
+                    <td>show</td>
+                    <td>初始化是否展示</td>
+                </tr>
+            </tbody>
+        </table>
+
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>toggle</td>
+                <td>手动切换模态框</td>
+            </tr>
+            <tr>
+                <td>show</td>
+                <td>手动打开modal</td>
+            </tr>
+            <tr>
+                <td>hide</td>
+                <td>手动关闭modal</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>事件</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>show.bs.modal</td>
+                <td>在调用 show 方法后触发</td>
+            </tr>
+            <tr>
+                <td>shown.bs.modal</td>
+                <td>当模态框对用户可见时触发（将等待 CSS 过渡效果完成）</td>
+            </tr>
+            <tr>
+                <td>hide.bs.modal</td>
+                <td>当调用 hide 实例方法时触发</td>
+            </tr>
+            <tr>
+                <td>hidden.bs.modal</td>
+                <td>当模态框完全对用户隐藏时触发</td>
+            </tr>
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+&lt;script&gt;
+   $('#identifier').modal({
+      keyboard: false
+   })
+
+    $('#identifier').modal('show');
+
+    $('#identifier').on('show.bs.modal', function () {
+      // 执行一些动作...
+    })
+&lt;/script&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
+
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -860,9 +1512,214 @@ $('#tt').treegrid({
         <h2 id="portlet">可拖拽Portlets</h2>
         <!--属性和方法-->
         <h4>属性</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>名称</td>
+                    <td>参数</td>
+                    <td>描述</td>
+                </tr>
+                <tr>
+                    <td>items</td>
+                    <td>string</td>
+                    <td>指定在排序对象中，哪些元素是可以进行拖拽排序的</td>
+                </tr>
+                <tr>
+                    <td>axis</td>
+                    <td>String : false </td>
+                    <td>如果有设置，则元素仅能横向或纵向拖动。可选值：'x', 'y' </td>
+                </tr>
+                <tr>
+                    <td>containment</td>
+                    <td>Element, String, Selector : false </td>
+                    <td>约束排序动作只能在一个指定的范围内发生。可选值：DOM对象, 'parent', 'document', 'window', 或jQuery对象</td>
+                </tr>
+                <tr>
+                    <td>opacity</td>
+                    <td>Float : false </td>
+                    <td>定义当排序时，辅助元素(helper)显示的透明度</td>
+                </tr>
+                <tr>
+                    <td>delay</td>
+                    <td>Integer : 0 </td>
+                    <td>以毫秒为单位，设置延迟多久才激活排序动作。此参数可防止误点击</td>
+                </tr>
+                <tr>
+                    <td>forcePlaceholderSize</td>
+                    <td> Boolean : false </td>
+                    <td>强转初始值的大小</td>
+                </tr>
+                <tr>
+                    <td>tolerance</td>
+                    <td>String : 'intersect' </td>
+                    <td>设置当拖动元素越过其它元素多少时便对元素进行重新排序。可选值：'intersect', 'pointer' </td>
+                </tr>
+                <tr>
+                    <td>helper</td>
+                    <td> String, Function : 'original' </td>
+                    <td>设置是否在拖拽元素时，显示一个辅助的元素。可选值：'original', 'clone' </td>
+                </tr>
+                <tr>
+                    <td>connectWith</td>
+                    <td> Selector </td>
+                    <td>允许sortable对象连接另一个sortable对象，可将item元素拖拽到另一个中</td>
+                </tr>
+                <tr>
+                    <td>cancel</td>
+                    <td>Selector : ':input,button'</td>
+                    <td>取消当前sortable对象中item元素的排序改变</td>
+                </tr>
+                <tr>
+                    <td>scroll</td>
+                    <td>Boolean : true</td>
+                    <td>如果设置成true，则元素被拖动到页面边缘时，会自动滚动</td>
+                </tr>
+                <tr>
+                    <td>revert</td>
+                    <td>Boolean : false</td>
+                    <td>如果设置成true，则被拖拽的元素在返回新位置时，会有一个动画效果 </td>
+                </tr>
+                <tr>
+                    <td>distance</td>
+                    <td>Integer : 1 </td>
+                    <td>决定至少要在元素上面拖动多少像素后，才正式触发排序动作 </td>
+                </tr>
+            </tbody>
+        </table>
 
         <h4>方法</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>destory</td>
+                <td>从元素中移除拖拽功能</td>
+            </tr>
+            <tr>
+                <td>disable</td>
+                <td>禁用元素的拖拽功能</td>
+            </tr>
+            <tr>
+                <td>enable</td>
+                <td>启用元素的拖拽功能</td>
+            </tr>
+            <tr>
+                <td>option</td>
+                <td>获取或设置元素的参数</td>
+            </tr>
+            <tr>
+                <td>serialize</td>
+                <td>获取或设置序列化后的每个item元素的id属性</td>
+            </tr>
+            <tr>
+                <td>toArray</td>
+                <td>获取序列化后的每个item元素的id属性的数组</td>
+            </tr>
+            <tr>
+                <td>refresh</td>
+                <td>手动重新刷新当前sortable对象的item元素的排序</td>
+            </tr>
+            <tr>
+                <td>refreshPositions</td>
+                <td>手动重新刷新当前sortable对象的item元素的坐标，此方法可能会降低性能</td>
+            </tr>
+            <tr>
+                <td>cancel</td>
+                <td>取消当前sortable对象中item元素的排序改变</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>事件</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>当排序动作开始时触发此事件</td>
+            </tr>
+            <tr>
+                <td>sort</td>
+                <td>当元素发生排序时触发此事件</td>
+            </tr>
+            <tr>
+                <td>change</td>
+                <td>当元素发生排序且坐标已发生改变时触发此事件</td>
+            </tr>
+            <tr>
+                <td>beforeStop</td>
+                <td>当排序动作结束之前触发此事件。此时占位符元素和辅助元素仍有效</td>
+            </tr>
+            <tr>
+                <td>stop</td>
+                <td>当排序动作结束时触发此事件</td>
+            </tr>
+            <tr>
+                <td>update</td>
+                <td>当排序动作结束时且元素坐标已经发生改变时触发此事件</td>
+            </tr>
+            <tr>
+                <td>receive</td>
+                <td>当一个已连接的sortable对象接收到另一个sortable对象的元素后触发此事件</td>
+            </tr>
+            <tr>
+                <td>over</td>
+                <td>当一个元素拖拽移入另一个sortable对象后触发此事件</td>
+            </tr>
+            <tr>
+                <td>out</td>
+                <td>当一个元素拖拽移出sortable对象移出并进入另一个sortable对象后触发此事件</td>
+            </tr>
+            <tr>
+                <td>activate</td>
+                <td>当一个有使用连接的sortable对象开始排序动作时，所有允许的sortable触发此事件</td>
+            </tr>
+            <tr>
+                <td>deactivate</td>
+                <td>当一个有使用连接的sortable对象结束排序动作时，所有允许的sortable触发此事件</td>
+            </tr>
+            </tbody>
+        </table>
+
         <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+&lt;script&gt;
+    $("#sortable_portlets").sortable({
+        connectWith: ".portlet",
+        items: ".portlet",
+        opacity: 0.8,
+        coneHelperSize: true,
+        placeholder: 'portlet-sortable-placeholder',
+        forcePlaceholderSize: true,
+        tolerance: "pointer",
+        helper: "clone",
+        tolerance: "pointer",
+        forcePlaceholderSize: !0,
+        helper: "clone",
+        cancel: ".portlet-sortable-empty, .portlet-fullscreen",
+        revert: 250, // animation in milliseconds
+        update: function(b, c) {
+            if (c.item.prev().hasClass("portlet-sortable-empty")) {
+                c.item.prev().before(c.item);
+            }
+        }
+    });
+&lt;/script&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
 
         <!--演示demo-->
         <h4>演示demo</h4>
@@ -871,33 +1728,299 @@ $('#tt').treegrid({
         </div>
 
         <h2 id="formvalidate">Form校验</h2>
+        <!--属性和方法-->
+        <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>required:true</td>
+                <td>必输字段</td>
+            </tr>
+            <tr>
+                <td>remote:"check.php" </td>
+                <td>使用ajax方法调用check.php验证输入值</td>
+            </tr>
+            <tr>
+                <td>email:true</td>
+                <td>必须输入正确格式的电子邮件</td>
+            </tr>
+            <tr>
+                <td>url:true</td>
+                <td>必须输入正确格式的网址</td>
+            </tr>
+            <tr>
+                <td>date:true</td>
+                <td>必须输入正确格式的日期 日期校验ie6出错，慎用</td>
+            </tr>
+            <tr>
+                <td>dateISO:true</td>
+                <td>必须输入正确格式的日期(ISO)，例如：2009-06-23，1998/01/22 只验证格式，不验证有效性</td>
+            </tr>
+            <tr>
+                <td>number:true</td>
+                <td>必须输入合法的数字(负数，小数)</td>
+            </tr>
+            <tr>
+                <td>digits:true</td>
+                <td>必须输入整数</td>
+            </tr>
+            <tr>
+                <td>creditcard</td>
+                <td>必须输入合法的信用卡号</td>
+            </tr>
+            <tr>
+                <td>equalTo:"#field"</td>
+                <td>输入值必须和#field相同</td>
+            </tr>
+            <tr>
+                <td>accept</td>
+                <td>输入拥有合法后缀名的字符串（上传文件的后缀）</td>
+            </tr>
+            <tr>
+                <td>maxlength:5</td>
+                <td>输入长度最多是5的字符串(汉字算一个字符)</td>
+            </tr>
+            <tr>
+                <td>minlength:10</td>
+                <td>输入长度最小是10的字符串(汉字算一个字符)</td>
+            </tr>
+            <tr>
+                <td>rangelength:[5,10]</td>
+                <td>输入长度必须介于 5 和 10 之间的字符串")(汉字算一个字符)</td>
+            </tr>
+            <tr>
+                <td>range:[5,10]</td>
+                <td>输入值必须介于 5 和 10 之间</td>
+            </tr>
+            <tr>
+                <td>max:5</td>
+                <td>输入值不能大于5</td>
+            </tr>
+            <tr>
+                <td>min:10</td>
+                <td>输入值不能小于10</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>可选项</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>debug</td>
+                <td>进行调试模式（表单不提交）</td>
+            </tr>
+            <tr>
+                <td>submitHandler</td>
+                <td>过验证后运行的函数，里面要加上表单提交的函数，否则表单不会提交</td>
+            </tr>
+            <tr>
+                <td>ignore</td>
+                <td>对某些元素不进行验证</td>
+            </tr>
+            <tr>
+                <td>rules</td>
+                <td>自定义规则，key:value 的形式，key 是要验证的元素，value 可以是字符串或对象</td>
+            </tr>
+            <tr>
+                <td>messages</td>
+                <td>自定义的提示信息，key:value 的形式，key 是要验证的元素，value 可以是字符串或函数</td>
+            </tr>
+            <tr>
+                <td>groups</td>
+                <td>对一组元素的验证，用一个错误提示，用 errorPlacement 控制把出错信息放在哪里</td>
+            </tr>
+            <tr>
+                <td>onSubmit</td>
+                <td>类型 Boolean，默认 true，指定是否提交时验证</td>
+            </tr>
+            <tr>
+                <td>onfocusout</td>
+                <td>类型 Boolean，默认 true，指定是否在获取焦点时验证</td>
+            </tr>
+            <tr>
+                <td>onkeyup</td>
+                <td>类型 Boolean，默认 true，指定是否在敲击键盘时验证</td>
+            </tr>
+            <tr>
+                <td>onclick</td>
+                <td>类型 Boolean，默认 true，指定是否在鼠标点击时验证（一般验证 checkbox、radiobox)</td>
+            </tr>
+            <tr>
+                <td>focusInvalid</td>
+                <td>类型 Boolean，默认 true。提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点</td>
+            </tr>
+            <tr>
+                <td>focusCleanup</td>
+                <td>类型 Boolean，默认 false。当未通过验证的元素获得焦点时，移除错误提示（避免和 focusInvalid 一起使用）</td>
+            </tr>
+            <tr>
+                <td>errorClass</td>
+                <td>类型 String，默认 "error"。指定错误提示的 css 类名，可以自定义错误提示的样式</td>
+            </tr>
+            <tr>
+                <td>errorElement</td>
+                <td>类型 String，默认 "label"。指定使用什么标签标记错误</td>
+            </tr>
+            <tr>
+                <td>wrapper</td>
+                <td>类型 String，指定使用什么标签再把上边的 errorELement 包起来</td>
+            </tr>
+            <tr>
+                <td>errorLabelContainer</td>
+                <td>类型 Selector，把错误信息统一放在一个容器里面</td>
+            </tr>
+            <tr>
+                <td>showErrors</td>
+                <td>跟一个函数，可以显示总共有多少个未通过验证的元素</td>
+            </tr>
+            <tr>
+                <td>errorPlacement</td>
+                <td>跟一个函数，可以自定义错误放到哪里</td>
+            </tr>
+            <tr>
+                <td>success</td>
+                <td>要验证的元素通过验证后的动作，如果跟一个字符串，会当作一个 css 类，也可跟一个函数</td>
+            </tr>
+            <tr>
+                <td>highlight</td>
+                <td>可以给未通过验证的元素加效果、闪烁等</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>事件</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>触发方式</td>
+                <td>类型</td>
+                <td>描述</td>
+                <td>默认值</td>
+            </tr>
+            <tr>
+                <td>onsubmit</td>
+                <td>Boolean</td>
+                <td>提交时验证。设置为 false 就用其他方法去验证。</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>onfocusout</td>
+                <td>Boolean</td>
+                <td>失去焦点时验证（不包括复选框/单选按钮）。</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>onkeyup</td>
+                <td>Boolean</td>
+                <td>在 keyup 时验证。</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>onclick</td>
+                <td>Boolean</td>
+                <td>在点击复选框和单选按钮时验证。</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>focusInvalid</td>
+                <td>Boolean</td>
+                <td>提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点。</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>focusCleanup</td>
+                <td>Boolean</td>
+                <td>如果是 true 那么当未通过验证的元素获得焦点时，移除错误提示。避免和 focusInvalid 一起用。</td>
+                <td>false</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>方法使用</h4>
+        <figure class="highlight js">
+            <table>
+                <tr>
+                    <td class="code">
+                        <pre>
+&lt;script&gt;
+    $("#signupForm").validate({
+        rules: {
+          firstname: "required",
+          lastname: "required",
+          username: {
+            required: true,
+            minlength: 2
+          },
+          password: {
+            required: true,
+            minlength: 5
+          },
+          confirm_password: {
+            required: true,
+            minlength: 5,
+            equalTo: "#password"
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          topic: {
+            required: "#newsletter:checked",
+            minlength: 2
+          },
+          agree: "required"
+        },
+        messages: {
+          firstname: "请输入您的名字",
+          lastname: "请输入您的姓氏",
+          username: {
+            required: "请输入用户名",
+            minlength: "用户名必需由两个字母组成"
+          },
+          password: {
+            required: "请输入密码",
+            minlength: "密码长度不能小于 5 个字母"
+          },
+          confirm_password: {
+            required: "请输入密码",
+            minlength: "密码长度不能小于 5 个字母",
+            equalTo: "两次密码输入不一致"
+          },
+          email: "请输入一个正确的邮箱",
+          agree: "请接受我们的声明",
+          topic: "请选择两个主题"
+        }
+    });
+&lt;/script&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </figure>
+
+
         <h3 id="valistatus">校验状态</h3>
         <div class="iframearea">
             <iframe src="iframepages/valistatus.html" width="100%" height="350" frameborder="0" scrolling="auto" class="iframepage" name="iframepage"></iframe>
         </div>
 
         <h3 id="basicvali">基本校验</h3>
-        <!--属性和方法-->
-        <h4>属性</h4>
 
-        <h4>方法</h4>
-        <h4>方法使用</h4>
-
-        <!--演示demo-->
-        <h4>演示demo</h4>
         <div class="iframearea">
             <iframe src="iframepages/basicvali.html" width="100%" height="350" frameborder="0" scrolling="auto" class="iframepage" name="iframepage"></iframe>
         </div>
 
         <h3 id="iconvali">图标显示检验</h3>
-        <!--属性和方法-->
-        <h4>属性</h4>
 
-        <h4>方法</h4>
-        <h4>方法使用</h4>
-
-        <!--演示demo-->
-        <h4>演示demo</h4>
         <div class="iframearea">
             <iframe src="iframepages/iconvali.html" width="100%" height="350" frameborder="0" scrolling="auto" class="iframepage" name="iframepage"></iframe>
         </div>

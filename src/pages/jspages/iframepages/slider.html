@@ -16,18 +16,17 @@
     <link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../../assets/plugins/metronic/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
     <!--<link href="../../../assets/plugins/metronic/plugins.css" rel="stylesheet" type="text/css"/>-->
-    <link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/>
-    <!--<script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-daterangepicker/moment.min.js"></script>-->
-    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+
+    <link href="../../../assets/plugins/metronic/UI_js/nouislider/jquery.nouislider.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/nouislider/jquery.nouislider.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
     <div id="head">
         <div id="actions">
             <ul class="normalRes">
-                <li class="active">
-                    <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+                <li>
+                    <span title="Lion-ui-demo">Lion-ui-demo</span>
                 </li>
 
                 <li>
@@ -47,80 +46,109 @@
     <div id="tabs" style="">
 			<pre data-language="js" class="prettyprint js tCont rainbow  ">
 &lt;script&gt;
-    $("#range_1").ionRangeSlider({
-        min: 0,
-        max: 5000,
-        from: 1000,
-        to: 4000,
-        type: 'double',
-        step: 1,
-        prefix: "$",
-        prettify: false,
-        hasGrid: true
-    });
-
-    $("#range_2").ionRangeSlider();
-
-    $("#range_5").ionRangeSlider({
-        min: 0,
-        max: 10,
-        type: 'single',
-        step: 0.1,
-        postfix: " mm",
-        prettify: false,
-        hasGrid: true
-    });
-
-    $("#range_6").ionRangeSlider({
-        min: -50,
-        max: 50,
-        from: 0,
-        type: 'single',
-        step: 1,
-        postfix: "°",
-        prettify: false,
-        hasGrid: true
-    });
-
-    $("#range_4").ionRangeSlider({
-        type: "single",
-        step: 100,
-        postfix: " light years",
-        from: 55000,
-        hideText: true
-    });
-
-    $("#range_3").ionRangeSlider({
-        type: "double",
-        postfix: " miles",
-        step: 10000,
-        from: 25000000,
-        to: 35000000,
-        onChange: function(obj){
-            var t = "";
-            for(var prop in obj) {
-                t += prop + ": " + obj[prop] + "\r\n";
+    $('#slider_0').noUiSlider({
+            direction: "rtl",
+            start: 40,
+            connect: "lower",
+            range: {
+                'min': 0,
+                'max': 100
             }
-            $("#result").html(t);
-        }
+        });
+
+        // slider 1
+        $("#slider_1").noUiSlider({
+            direction: "rtl",
+            start: [20, 80],
+            range: {
+                min: 0,
+                max: 100
+            },
+            connect: true,
+            handles: 2
+        });
+
+        // slider 2
+        $('#slider_2').noUiSlider({
+            direction: "rtl",
+            range: {
+                min: -20,
+                max: 40
+            },
+            start: [10, 30],
+            handles: 2,
+            connect: true,
+            step: 1,
+            serialization: {
+                lower: [
+                    $.Link({
+                        target: $("#slider_2_input_start"),
+                        method: "val"
+                    })
+                ],
+                upper: [
+                    $.Link({
+                        target: $("#slider_2_input_end"),
+                        method: "val"
+                    })
+                ]
+            }
+
+        });
+
+        // slider 3
+        $("#slider_3").noUiSlider({
+            direction: "rtl",
+            start: [20, 80],
+            range: {
+                min: 0,
+                max: 100
+            },
+            connect: true,
+            handles: 2
+        });
+
+        $("#slider_3_checkbox").change(function () {
+            // If the checkbox is checked
+            if ($(this).is(":checked")) {
+                // Disable the slider
+                $("#slider_3").attr("disabled", "disabled");
+            } else {
+                // Enabled the slider
+                $("#slider_3").removeAttr("disabled");
+            }
+        });
+
+        // slider 4
+        $("#slider_4").noUiSlider({
+            direction: "rtl",
+            start: [20, 80],
+            range: {
+                min: 0,
+                max: 100
+            },
+            connect: true,
+            handles: 2
+        });
+
+        $("#slider_4_btn").click(function () {
+            alert($("#slider_4").val());
     });
 &lt;/script&gt;
 			</pre>
 
 			<pre data-language="html" class="html tCont active rainbow prettyprint">
-&lt;link href="../../../assets/plugins/metronic/font-awesome.min.css" rel="stylesheet" type="text/css"/&gt;
-&lt;link href="../../../assets/plugins/metronic/simple-line-icons.min.css" rel="stylesheet" type="text/css"/&gt;
 &lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
-&lt;link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/&gt;
-&lt;link href="../../../assets/plugins/metronic/UI_js/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/&gt;
-&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"&gt;&lt;/script&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_js/nouislider/jquery.nouislider.css" rel="stylesheet" type="text/css"/&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/nouislider/jquery.nouislider.min.js"&gt;&lt;/script&gt;
+
 &lt;div class="row"&gt;
     &lt;div class="col-md-12"&gt;
         &lt;!-- BEGIN PORTLET--&gt;
         &lt;div class="portlet box blue"&gt;
             &lt;div class="portlet-title"&gt;
                 &lt;div class="caption"&gt;
-                    &lt;i class="fa fa-gift"&gt;&lt;/i&gt;离子范围滑块
+                    &lt;i class="fa fa-gift"&gt;&lt;/i&gt;Ion Range Sliders
                 &lt;/div&gt;
                 &lt;div class="tools"&gt;
                     &lt;a href="javascript:;" class="collapse"&gt;
@@ -137,42 +165,48 @@
                 &lt;form role="form" class="form-horizontal form-bordered"&gt;
                     &lt;div class="form-body"&gt;
                         &lt;div class="form-group"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;基本Slider&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_4" type="text" name="range_4" value="10000;100000"/&gt;
+                            &lt;label class="col-md-3 control-label"&gt;基本&lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="noUi-control noUi-success" id="slider_0"&gt;
+                                &lt;/div&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;div class="form-group"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;金额范围 1&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_1" type="text" name="range_1" value=""/&gt;
+                            &lt;label class="col-md-3 control-label"&gt;基本范围 Slider&lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="noUi-control noUi-info" id="slider_1"&gt;
+                                &lt;/div&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;div class="form-group"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;金额范围 2&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true"/&gt;
+                            &lt;label class="col-md-3 control-label"&gt;输入框&lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="noUi-control noUi-danger" id="slider_2"&gt;
+                                &lt;/div&gt;
+                                &lt;div class="input-group input-medium margin-top-20"&gt;
+                                    &lt;input id="slider_2_input_start" type="text" class="form-control" name="from"&gt;
+												&lt;span class="input-group-addon"&gt;
+												to &lt;/span&gt;
+                                    &lt;input id="slider_2_input_end" type="text" class="form-control" name="to"&gt;
+                                &lt;/div&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;div class="form-group"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;长度Slider&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_5" type="text" name="range_5" value=""/&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="form-group"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;温度Slider&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_6" type="text" name="range_6" value=""/&gt;
+                            &lt;label class="col-md-3 control-label"&gt;带禁止按钮滑动Slider&lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="noUi-control noUi-warning" id="slider_3"&gt;
+                                &lt;/div&gt;
+                                &lt;label class="margin-top-10"&gt;
+                                    &lt;input id="slider_3_checkbox" type="checkbox" value="1"&gt; 禁止! &lt;/label&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;div class="form-group last"&gt;
-                            &lt;label class="col-md-3 control-label"&gt;距离范围&lt;/label&gt;
-                            &lt;div class="col-md-9"&gt;
-                                &lt;input id="range_3" type="text" name="range_3" value="1000000;100000000"/&gt;
-                                &lt;pre class="well margin-top-20" id="result"&gt;
-                                &lt;/pre&gt;
-                                &lt;input type="button" class="btn btn-sm red" id="updateLast" value="Update this slider"&gt;
+                            &lt;label class="col-md-3 control-label"&gt;可读滑动值&lt;/label&gt;
+                            &lt;div class="col-md-4"&gt;
+                                &lt;div class="noUi-control noUi-default" id="slider_4"&gt;
+                                &lt;/div&gt;
+                                &lt;a id="slider_4_btn" href="javascript:;" class="margin-top-10 btn blue btn-sm"&gt;
+                                    Read me! &lt;/a&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
@@ -190,6 +224,7 @@
         &lt;!-- END PORTLET--&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+
 			</pre>
         <!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {-->
@@ -203,13 +238,18 @@ pre.prettyprint, code.prettyprint {-->
 <!--}
 			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
+            <style>
+                .form-control{
+                    padding: 6px 12px;
+                }
+            </style>
             <div class="row">
                 <div class="col-md-12">
                     <!-- BEGIN PORTLET-->
                     <div class="portlet box blue">
                         <div class="portlet-title">
                             <div class="caption">
-                                <i class="fa fa-gift"></i>离子范围滑块
+                                <i class="fa fa-gift"></i>Ion Range Sliders
                             </div>
                             <div class="tools">
                                 <a href="javascript:;" class="collapse">
@@ -226,42 +266,48 @@ pre.prettyprint, code.prettyprint {-->
                             <form role="form" class="form-horizontal form-bordered">
                                 <div class="form-body">
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">基本Slider</label>
-                                        <div class="col-md-9">
-                                            <input id="range_4" type="text" name="range_4" value="10000;100000"/>
+                                        <label class="col-md-3 control-label">基本</label>
+                                        <div class="col-md-4">
+                                            <div class="noUi-control noUi-success" id="slider_0">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">金额范围 1</label>
-                                        <div class="col-md-9">
-                                            <input id="range_1" type="text" name="range_1" value=""/>
+                                        <label class="col-md-3 control-label">基本范围 Slider</label>
+                                        <div class="col-md-4">
+                                            <div class="noUi-control noUi-info" id="slider_1">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">金额范围 2</label>
-                                        <div class="col-md-9">
-                                            <input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true"/>
+                                        <label class="col-md-3 control-label">输入框</label>
+                                        <div class="col-md-4">
+                                            <div class="noUi-control noUi-danger" id="slider_2">
+                                            </div>
+                                            <div class="input-group input-medium margin-top-20">
+                                                <input id="slider_2_input_start" type="text" class="form-control" name="from">
+												<span class="input-group-addon">
+												to </span>
+                                                <input id="slider_2_input_end" type="text" class="form-control" name="to">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">长度Slider</label>
-                                        <div class="col-md-9">
-                                            <input id="range_5" type="text" name="range_5" value=""/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">温度Slider</label>
-                                        <div class="col-md-9">
-                                            <input id="range_6" type="text" name="range_6" value=""/>
+                                        <label class="col-md-3 control-label">带禁止按钮滑动Slider</label>
+                                        <div class="col-md-4">
+                                            <div class="noUi-control noUi-warning" id="slider_3">
+                                            </div>
+                                            <label class="margin-top-10">
+                                                <input id="slider_3_checkbox" type="checkbox" value="1"> 禁止! </label>
                                         </div>
                                     </div>
                                     <div class="form-group last">
-                                        <label class="col-md-3 control-label">距离范围</label>
-                                        <div class="col-md-9">
-                                            <input id="range_3" type="text" name="range_3" value="1000000;100000000"/>
-											<pre class="well margin-top-20" id="result">
-											</pre>
-                                            <input type="button" class="btn btn-sm red" id="updateLast" value="Update this slider">
+                                        <label class="col-md-3 control-label">可读滑动值</label>
+                                        <div class="col-md-4">
+                                            <div class="noUi-control noUi-default" id="slider_4">
+                                            </div>
+                                            <a id="slider_4_btn" href="javascript:;" class="margin-top-10 btn blue btn-sm">
+                                                Read me! </a>
                                         </div>
                                     </div>
                                 </div>
@@ -281,62 +327,93 @@ pre.prettyprint, code.prettyprint {-->
             </div>
 
             <script>
-                $("#range_1").ionRangeSlider({
-                    min: 0,
-                    max: 5000,
-                    from: 1000,
-                    to: 4000,
-                    type: 'double',
-                    step: 1,
-                    prefix: "$",
-                    prettify: false,
-                    hasGrid: true
-                });
-
-                $("#range_2").ionRangeSlider();
-
-                $("#range_5").ionRangeSlider({
-                    min: 0,
-                    max: 10,
-                    type: 'single',
-                    step: 0.1,
-                    postfix: " mm",
-                    prettify: false,
-                    hasGrid: true
-                });
-
-                $("#range_6").ionRangeSlider({
-                    min: -50,
-                    max: 50,
-                    from: 0,
-                    type: 'single',
-                    step: 1,
-                    postfix: "°",
-                    prettify: false,
-                    hasGrid: true
-                });
-
-                $("#range_4").ionRangeSlider({
-                    type: "single",
-                    step: 100,
-                    postfix: " light years",
-                    from: 55000,
-                    hideText: true
-                });
-
-                $("#range_3").ionRangeSlider({
-                    type: "double",
-                    postfix: " miles",
-                    step: 10000,
-                    from: 25000000,
-                    to: 35000000,
-                    onChange: function(obj){
-                        var t = "";
-                        for(var prop in obj) {
-                            t += prop + ": " + obj[prop] + "\r\n";
-                        }
-                        $("#result").html(t);
+                $('#slider_0').noUiSlider({
+                    direction: "rtl",
+                    start: 40,
+                    connect: "lower",
+                    range: {
+                        'min': 0,
+                        'max': 100
                     }
+                });
+
+                // slider 1
+                $("#slider_1").noUiSlider({
+                    direction: "rtl",
+                    start: [20, 80],
+                    range: {
+                        min: 0,
+                        max: 100
+                    },
+                    connect: true,
+                    handles: 2
+                });
+
+                // slider 2
+                $('#slider_2').noUiSlider({
+                    direction: "ltr",
+                    range: {
+                        min: -20,
+                        max: 40
+                    },
+                    start: [10, 30],
+                    handles: 2,
+                    connect: true,
+                    step: 1,
+                    serialization: {
+                        lower: [
+                            $.Link({
+                                target: $("#slider_2_input_start"),
+                                method: "val"
+                            })
+                        ],
+                        upper: [
+                            $.Link({
+                                target: $("#slider_2_input_end"),
+                                method: "val"
+                            })
+                        ]
+                    }
+
+                });
+
+                // slider 3
+                $("#slider_3").noUiSlider({
+                    direction: "rtl",
+                    start: [20, 80],
+                    range: {
+                        min: 0,
+                        max: 100
+                    },
+                    connect: true,
+                    handles: 2
+                });
+
+                $("#slider_3_checkbox").change(function () {
+                    // If the checkbox is checked
+                    if ($(this).is(":checked")) {
+                        // Disable the slider
+                        $("#slider_3").attr("disabled", "disabled");
+                    } else {
+                        // Enabled the slider
+                        $("#slider_3").removeAttr("disabled");
+                    }
+                });
+
+                // slider 4
+                $("#slider_4").noUiSlider({
+                    direction: "rtl",
+                    start: [20, 80],
+                    range: {
+                        min: 0,
+                        max: 100
+                    },
+                    connect: true,
+                    handles: 2
+                });
+
+                $("#slider_4_btn").click(function () {
+                    alert($("#slider_4").val());
                 });
             </script>
         </div>

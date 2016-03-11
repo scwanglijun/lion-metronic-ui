@@ -26,19 +26,16 @@
     <div id="head">
         <div id="actions">
             <ul class="normalRes">
-                <li class="active">
-                    <a title="Lion-ui-demo" data-trigger-type="js" href="#">Lion-ui-demo</a>
+                <li>
+                    <span title="Lion-ui-demo">Lion-ui-demo</span>
                 </li>
-                <!--<li>-->
-                <!--<a title="Resources" data-trigger-type="resources" href="#Resources">Resources</a>-->
-                <!--</li>-->
 
                 <li>
                     <a title="HTML" data-trigger-type="html" href="#HTML">HTML</a>
                 </li>
 
                 <li>
-                    <a title="CSS" data-trigger-type="css" href="#CSS">CSS</a>
+                    <a title="JS" data-trigger-type="js" href="#js">JS</a>
                 </li>
 
                 <li>
@@ -48,31 +45,45 @@
         </div>
     </div>
     <div id="tabs" style="">
-			<pre data-language="js" class="prettyprint js tCont rainbow active ">
-$(function(){
-   //初始化组件
-   var backTop=one.ui.backTop({
-        id:"one_backtop",
-        isAnimate:false  //是否动画,默认为true
-	});
-});
+			<pre data-language="js" class="prettyprint js tCont rainbow ">
+&lt;script&gt;
+    $('#reservation').daterangepicker();
+&lt;/script&gt;
 			</pre>
-        <!--<div data-language="resources" class="resources tCont prettyprint" >-->
-        <!--resources-->
-        <!--</div>-->
-			<pre data-language="html" class="html tCont  rainbow prettyprint">
-&lt;!--整个框架依赖的JS文件--&gt;
-&lt;script src="../../src/js/zepto.min.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的JS文件--&gt;
-&lt;script src="../../src/js/one.js"&gt;&lt;/script&gt;
-&lt;!--当前组件JS文件--&gt;
-&lt;script src="../../src/js/ui/backtop/backtop.js"&gt;&lt;/script&gt;
-&lt;!--当前组件依赖的CSS文件--&gt;
-&lt;link href="../../src/css/one.css" rel="stylesheet"&gt;
-&lt;!--当前组件CSS文件--&gt;
-&lt;link href="../../src/css/ui/backtop.css" rel="stylesheet"&gt;
+
+			<pre data-language="html" class="html tCont active rainbow prettyprint">
+&lt;link href="../../../assets/plugins/metronic/bootstrap.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/&gt;
+
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-daterangepicker/moment.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-daterangepicker/daterangepicker.js"&gt;&lt;/script&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-md-12"&gt;
+        &lt;form action="#" class="form-horizontal form-bordered"&gt;
+            &lt;div class="form-body"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label class="control-label col-md-3"&gt;日期范围&lt;/label&gt;
+                    &lt;div class="col-md-4"&gt;
+                        &lt;div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy"&gt;
+                                        &lt;span class="input-group-btn add-on"&gt;
+                                        &lt;button class="btn default date-set" type="button"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/button&gt;
+                                        &lt;/span&gt;
+                            &lt;input type="text" size="16" style="width:200px;" id="reservation" class="form-control" value="03/18/2016 - 03/23/2016"&gt;
+                        &lt;/div&gt;
+                        &lt;!-- /input-group --&gt;
+                                    &lt;span class="help-block"&gt;
+                                    选择日期范围 &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
 			</pre>
-			<pre data-language="css" class="css tCont  rainbow prettyprint">
+			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
 pre.prettyprint, code.prettyprint {
         background-color: #1e2328;
         -moz-border-radius: 8px;
@@ -82,7 +93,7 @@ pre.prettyprint, code.prettyprint {
         -khtml-border-radius: 8px;
         border-radius: 8px;
 }
-			</pre>
+			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <style>
                 .form-control{
@@ -97,14 +108,14 @@ pre.prettyprint, code.prettyprint {
                                 <label class="control-label col-md-3">日期范围</label>
                                 <div class="col-md-4">
                                     <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
-                                        <input type="text" class="form-control" name="from">
-                                                                <span class="input-group-addon">
-                                                                to </span>
-                                        <input type="text" class="form-control" name="to">
+                                        <span class="input-group-btn add-on">
+                                        <button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
+                                        </span>
+                                        <input type="text" size="16" style="width:200px;" id="reservation" class="form-control" value="03/18/2016 - 03/23/2016">
                                     </div>
                                     <!-- /input-group -->
-                                                            <span class="help-block">
-                                                            选择日期范围 </span>
+                                    <span class="help-block">
+                                    选择日期范围 </span>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +123,7 @@ pre.prettyprint, code.prettyprint {
                 </div>
             </div>
             <script>
-                //$('.input-daterange').daterangepicker();
+                $('#reservation').daterangepicker();
             </script>
         </div>
     </div>
