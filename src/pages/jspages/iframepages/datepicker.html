@@ -58,7 +58,7 @@ $('#sandbox-container input').datepicker({
 &lt;script type="text/javascript" src="../../../assets/plugins/metronic/UI_js/pickers/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
 
 &lt;div id="sandbox-container"&gt;
-    &lt;input type="text"/&gt;
+    &lt;input type="text" placeholder="2015-03-23"/&gt;
 &lt;/div&gt;
 			</pre>
 			<!--<pre data-language="css" class="css tCont  rainbow prettyprint">
@@ -74,8 +74,10 @@ pre.prettyprint, code.prettyprint {
 			</pre>-->
         <div data-language="result" class="tCont result prettyprint" >
             <div id="sandbox-container">
-                <input type="text"/>
+                <input type="text" placeholder="2016-03-10"/>
             </div>
+            <!--<input type="text" id="txt" value="123234sdw" onfocus="setFocus()"/>-->
+
             <script>
                 $('#sandbox-container input').datepicker({
                     language: "zh-CN",
@@ -84,6 +86,16 @@ pre.prettyprint, code.prettyprint {
                     todayBtn: true,//今日按钮
                     format: "yyyy-mm-dd"//日期格式
                 });
+
+
+//                function setFocus() {
+//                    //alert('aaaa');
+//                    var obj = event.srcElement;
+//                    var txt =obj.createTextRange();
+//                    txt.moveStart('character',obj.value.length);
+//                    txt.collapse(true);
+//                    txt.select();
+//                }
             </script>
         </div>
     </div>

@@ -2029,6 +2029,46 @@ $('#daterange').on('apply.daterangepicker', function(ev, picker) {
         <div class="iframearea">
             <iframe src="iframepages/fileupload.html" width="100%" height="350" frameborder="0" scrolling="auto" class="iframepage" name="iframepage"></iframe>
         </div>-->
+        <h2 id="cityslect">城市级联</h2>
+        <h4>属性</h4>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>名称</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td>请求的json地址</td>
+            </tr>
+            <tr>
+                <td>prov </td>
+                <td>初始化设置省份</td>
+            </tr>
+            <tr>
+                <td>city</td>
+                <td>初始化设置城市</td>
+            </tr>
+            <tr>
+                <td>dist</td>
+                <td>初始化设置县</td>
+            </tr>
+            <tr>
+                <td>nodata</td>
+                <td>设置联动后续的选择项隐藏</td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>必选项</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--演示demo-->
+        <h4>演示demo</h4>
+        <div class="iframearea">
+            <iframe src="iframepages/cityselect.html" width="100%" height="380" frameborder="0" scrolling="auto" class="iframepage" name="iframepage"></iframe>
+        </div>
 
         <p>希望上例能让你对 Lion-UI 的工作原理有一个基础概念。我知道你现在有许多疑问——继续阅读，在后面的教程将一一解答。</p>
 
@@ -2049,6 +2089,8 @@ $('#daterange').on('apply.daterangepicker', function(ev, picker) {
         var toc = $("#toc").tocify({
             selectors: "h2,h3"
         }).data("toc-tocify");
+
+        $('.tocify-extend-page').remove();
 
     });
 </script>

@@ -11,7 +11,7 @@ body, ul, ol, li, p, pre, div, a {
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
-	color: #525252;
+	/*color: #525252;*/
 }
 
 a {

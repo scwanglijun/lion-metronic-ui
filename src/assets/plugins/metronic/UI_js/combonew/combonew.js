@@ -36,8 +36,9 @@
     	templateResult:'',//用户格式显示内容;
     	data:null,//显示内容
     	multiple:false,
+		maximumSelectionLength: 1,
     	url:'',//
-    	minimumResultsForSearch:-1,//默认不显示搜索框
+    	//minimumResultsForSearch:-1,//默认不显示搜索框
     	textfield:'text',//后台获取下拉文件key
     	valuefield:'id',//Value的key
     	selectedField:'selected',//是否选中的key
